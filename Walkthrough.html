@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="Walkthrough.css">
+    <link rel="stylesheet" href="/Walkthrough.css">
 
-    <script src="Walkthrough.js" defer></script>
+    <script src="/Walkthrough.js" defer></script>
 </head>
 
 
@@ -29,9 +29,9 @@
         <navbar>
             <topnav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="https://ceptre-editor-program.glitch.me/">Ceptre Editor</a></li>
-                    <li><a href="tutorial.html"> Tutorials</a></li>
+                    <li><a href="/tutorial.html"> Tutorials</a></li>
                 </ul>
             </topnav>
         </navbar>
@@ -85,8 +85,8 @@
                 </p>
 
                 <p>
-                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fmap%20(1).png?v=1560960368510"
-                        alt="concept" align="center" style="float: left" />
+                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fmap%20(1).png" alt="concept"
+                        align="center" style="float: left" />
                     <br />
                     <br />
                     <br />
@@ -147,7 +147,7 @@
                     <br />
                     To start with this example we will make a Set named "elements."
                     <br />
-                    In this Set I will add Thomas and the items (The metal key, the golden key and the kepad code).
+                    In this Set we will add Thomas and the items (The metal key, the golden key and the kepad code).
                     <br />
                     <br />
                     It isn't imperative that you put them together, however in the next sections it will save us time
@@ -164,7 +164,7 @@
                         align="center" style="float: right" />
                     <br />
                     <br />
-                    I will also add another two Sets called "rooms" and "trapped."
+                    We will also add another two Sets called "rooms" and "trapped."
                     <br />
                     <br />
                     "Rooms" are all the rooms that Thomas will be able to move back and forth as well as interact with
@@ -193,8 +193,8 @@
 
                 <p>
 
-                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep3.png?v=1561397026907"
-                        alt="image" align="center" style="float: left" />
+                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep3.png" alt="image"
+                        align="center" style="float: left" />
 
                     Next we will add the Predicates.
                     <br />
@@ -425,12 +425,8 @@
 
 
                         <li>
-                            <strong>Open wood door</strong>
+                            <strong>Leave dungeon</strong>
                         </li>
-                        <br />
-                        In this rule Thomas will just appear to open the door of the dungeon that they're locked in
-                        without moving. However, for us, they will be moving from "locked_dungeon" (in the trapped Set)
-                        to "dungeon" (in the rooms Set) so that they'll be able to move later on.
                         <br />
                         This rule requires two Conditions:
                         <br />
@@ -443,12 +439,15 @@
                             </em>
                         </ul>
                         <br />
+                        This option should only appear after Thomas has equipped the metal key, which is why the
+                        predicate "equip" is in the conditions.
+                        <br />
                         Once these conditions are filled, the result of the rule firing would be:
                         <br />
                         <br />
                         <ul>
                             <em>
-                                - At: Thomas (Element) Dungeon (Rooms).
+                                - At: Thomas (Element) is in the Hallway (Rooms).
                             </em>
                         </ul>
                         <br />
@@ -483,7 +482,7 @@
                             In the second argument of the Predicate you will want to select the option "New variable".
                             <br />
                             A new dialogue box will appear and you'll be able to name the Variable and name it as you
-                            wish, in this case I just named it "L" (to indiate "location").
+                            wish, in this case we can just named it "L" (to indiate "location").
                             <br />
                             A variable means that any element of the set could be filling this field and the rule can
                             still be fired.
@@ -560,15 +559,12 @@
                         <br />
                         <br />
                         <li>
-                            <strong>Open secret door</strong>
+                            <strong>Enter secret room</strong>
                         </li>
 
                         <br />
                         This rule can be fired after Thomas equips the golden key since we don't want them to be able to
                         enter the secret room without said key.
-                        <br />
-                        It is similar to the locked dungeon rule, however instead of getting out the character wants to
-                        be let in.
                         <br />
                         It requires two Conditions:
                         <br />
@@ -577,7 +573,7 @@
                             <em>
                                 - At: Thomas (Element) is in the the master bedroom (Rooms).
                                 <br />
-                                - At: Golden key (Element) is in the master bedroom (Rooms).
+                                - Equip: Golden key (Element) Thomas (Element).
                             </em>
                         </ul>
                         <br />
@@ -586,15 +582,120 @@
                         <br />
                         <ul>
                             <em>
-                                - Equip: Golden key (Element) Thomas (Element).
+                                - Locked: Thomas (Element) is in the secret room (trapped).
                             </em>
                         </ul>
                         <br />
-                        This should roughly read as Thomas having equipped the golden key.
+                        <br />
+                        Lastly, check the box beside the first condition. This will remove Thomas from the home library
+                        and into the secret room, it isn't a cloning room after all.
+                        <br />
+
+
                         <br />
                         <br />
-                        Lastly, check the box beside the second condition. This will make the key dissappear from the
-                        master bedroom, since Thomas has already equipped it.
+                        <br />
+                        <li>
+                            <strong>Take keypad code</strong>
+                        </li>
+
+                        <br />
+                        Now, this is the last item Thomas will need to collect to be able to escape.
+                        <br />
+                        It needs two Conditions:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - Locked: Thomas (Element) is in the secret room (trapped)
+                                <br />
+                                - Locked: Keypad code (Element) is in the secret room (trapped)
+                            </em>
+                        </ul>
+                        <br />
+                        Once these conditions are filled, the result of the rule firing would be:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - Equip: Keypad code (Element) Thomas (Element).
+                            </em>
+                        </ul>
+                        <br />
+                        <br />
+                        And finally, check the box to remove the second condition (this would mean that after the rule
+                        is fired the keypad code will disappear from the room as Thomas has equipped it.)
+                        <br />
+
+
+                        <br />
+                        <br />
+                        <br />
+                        <li>
+                            <strong>Leave secret room</strong>
+                        </li>
+
+                        <br />
+                        This rule is much simpler than the other ones since it only needs Thomas to be in the secret
+                        room without any other prerequisite.
+                        <br />
+                        It needs only one Condition:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - Locked: Thomas (Element) is in the secret room (trapped)
+                            </em>
+                        </ul>
+                        <br />
+                        The result would simply take Thomas back to the home library:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - At: Thomas (Element) is in the the master bedroom (Rooms).
+                            </em>
+                        </ul>
+                        <br />
+                        <br />
+                        And lastly, check the box next to the condition to remove it. This would delete Thomas from the
+                        secret room.
+                        <br />
+
+
+                        <br />
+                        <br />
+                        <br />
+                        <li>
+                            <strong>Leave creepy house</strong>
+                        </li>
+
+                        <br />
+                        And with this rule we have reached what would be the end of the game.
+                        <br />
+                        It needs two Conditions:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - At: Thomas (Element) is in the the main room (Rooms).
+                                <br />
+                                - Equip: Keypad code (Element) Thomas (Element).
+                            </em>
+                        </ul>
+                        <br />
+                        The result would finally put Thomas on their way home, wherever that is:
+                        <br />
+                        <br />
+                        <ul>
+                            <em>
+                                - At: Thomas (Element) is on their road home (Rooms).
+                            </em>
+                        </ul>
+                        <br />
+                        <br />
+                        And lastly, check the box next to the first condition to remove it, removing Thomas from the
+                        creepy house.
                         <br />
 
                     </ol>
@@ -603,17 +704,63 @@
 
 
             </details>
-
-
-
-
-
-
-
-
-
-
         </span>
+
+    </details>
+
+
+    <details>
+        <summary style="font-size:30px; font-family:Impact; color: #c307ab;">
+            Initial State Tab
+        </summary>
+
+        <span style="font-family:Bookman Old Style">
+
+            <details>
+                <summary style="font-size:20px; color: orange;">
+                    Step 5
+                </summary>
+
+                <p>
+                    Now we will be moving to the Initial State Tab [<img
+                        src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Finitial%20state%20tab.png"
+                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="image">].
+                    <br />
+                    The Initial State is the state of execution your program will begin in.
+                    <br />
+                    In this example you only have to think of it in two ways:
+                    <ol>
+                        <ul>
+                            The building of your map, which will most likely stay stagnant.
+                            <br />
+                            In this case, the rooms (including the locked ones) will not change at all throughout all
+                            the "playthrough."
+                        </ul>
+
+                        <ul>
+                            The first position of your elements. These will change in the playthroughs, but when you
+                            start the "game" again these elements will go back to the position you put them in.
+                            <br />
+                            In this case, the items and Thomas will all start in specific positions, however they will
+                            be moved or mutated in the game.
+                            <br />
+                            Once you start the game again Thomas and the items will go back to their first positions.
+                        </ul>
+                    </ol>
+                </p>
+                <p>
+                    With that in mind we will start by making the map.
+                    <br />
+                    <br />
+                    Bringing back the concept we saw in Step 1 and the predicate we saw in
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+            </details>
+        </span>
+
     </details>
 
 
