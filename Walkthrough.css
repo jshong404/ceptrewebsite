@@ -4,6 +4,7 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
+  text-align: block;
 }
 
 h1 {
@@ -21,7 +22,21 @@ a {
     text-decoration: none;
 }
 
+div {
+  display: block;
+}
+div-a{
+  text-align: right;
+}
 
+#container{
+   width:1350px;
+}
+
+section {
+  display: inline-block;
+  width: 25%;
+}
 
 
 header {

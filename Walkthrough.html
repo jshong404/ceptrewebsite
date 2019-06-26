@@ -11,13 +11,7 @@
     <link rel="stylesheet" href="/Walkthrough.css">
 
     <script src="/Walkthrough.js" defer></script>
-</head>
 
-
-
-
-
-<body>
 
     <header style="background-color: white" id="top">
         <header>
@@ -44,6 +38,16 @@
     <h1 align="center">
         Step by Step Tutorial.
     </h1>
+    
+</head>
+
+
+
+
+
+<body maxlength="70" id="container">
+
+
 
     <span style="font-family:Bookman Old Style">
 
@@ -84,14 +88,18 @@
                     However, trial and error is always an option, especially if you are not familiar with Ceptre.
                 </p>
 
-                <p>
+                <div>
                     <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fmap%20(1).png" alt="concept"
-                        align="center" style="float: left" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                        align="center" hspace="10" vspace="10" style="float: left" />
+
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <p>
+
+
                     For this case we are going to make a map in which the main character "Thomas" is trying to escape a
                     castle by collecting some items.
                     <br />
@@ -737,6 +745,10 @@
                             the "playthrough."
                         </ul>
 
+                        <br />
+                        <br />
+                        <br />
+
                         <ul>
                             The first position of your elements. These will change in the playthroughs, but when you
                             start the "game" again these elements will go back to the position you put them in.
@@ -752,16 +764,194 @@
                     With that in mind we will start by making the map.
                     <br />
                     <br />
-                    Bringing back the concept we saw in Step 1 and the predicate we saw in
+                    Bringing back the concept we saw in Step 1 and the predicate "Adjacent" we saw in Step 3:
+                    <br />
+                </p>
+                <div>
+                    <section style="float: left">
+                        <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fmap%20(1).png"
+                            alt="image" align="center" />
+                    </section>
+                    <section style="float: right">
+                        <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep3.png" alt="image"
+                            align="center" style="float: right" />
+                    </section>
+
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+
+                <p>
+                    We know which rooms we want to be adjacent to each other, so now we only need to add them into the
+                    program.
+                    <br />
+                    <br />
+                </p>
+            </details>
+
+            <details>
+                <summary style="font-size:20px; color: orange;">
+                    Step 6
+                </summary>
+
+                <p>
+                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep9.png" alt="image"
+                        align="center" style="float: left; padding:20px" />
+                    <br />
+                    <br />
+                    We'll start by adding the adjacent rooms.
+                    <br />
+                    <br />
+                    Since we already have some rules to move into certain places (Locked rooms and the exit) we do not
+                    have to add them here; however we do need
+                    to add the rest of the rooms since the rule that applies to them uses variables (The Move rule).
+                    <br />
+                    <br />
+                    First we'll select the button "Add Atom."
+                    <br />
+                    An atom is just the predicate that we will be using for the Initial State.
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    For this whole step we will be using the "Adjacent" predicate.
+                    <br />
+                    <br />
+                    Next we will insert the arguments:
+                    <ul>
+                        <em>
+                            - Adjacent: Hallway (Rooms) Home library (Rooms).
+                        </em>
+                        <br />
+                        <br />
+                        <strong>Note:</strong>
+                        <br />
+                        <br />
+                        This only means that Thomas will be able to go into the Home library, but not from the Home
+                        library to the Hallway. To allow them to go back and forward we need to do this rule again, just
+                        switching the arguments.
+                        <br />
+                        <br />
+                        <br />
+                    </ul>
+                    To save time we should also use the button "Duplicate Atom" [<img
+                        src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fduplicate%20atom.png"
+                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="image">]; which, as the
+                    name suggests, will make a copy of the atom.
+                    <br />
+                    This way we only have to switch the arguments without having to select the predicate again.
+                </p>
+                <p>
+                    We will essentially be repeating this process until the rooms we want to be adjacent are all filled
+                    in.
+                    <br />
+                    <br />
+                    At the end we should have:
+                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep8.png" alt="image"
+                        align="center" style="float: right" />
+                    <ol>
+                        <ul>
+                            - Adjacent: Hallway (Rooms) Home library (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Home library (Rooms) Hallway (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Home library (Rooms) Master bedroom (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Master bedroom (Rooms) Home library (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Master bedroom (Rooms) Main room (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Main room (Rooms) Master bedroom (Rooms).
+                        </ul>
+
+                    </ol>
                 </p>
                 <br />
                 <br />
                 <br />
                 <br />
             </details>
+
+            <details>
+                <summary style="font-size:20px; color: orange;">
+                    Step 7
+                </summary>
+
+                <p>
+                    Similarly to the last step we will be putting all the elements in their place, however we know that
+                    we will be able to change their original states (In this case just change their position).
+                    <br />
+                    <br />
+                    Thankfully we will not have to add anything new to this and can just add the atoms the same way we
+                    had in the previous step.
+                    <br />
+                    <br />
+                    <img src="https://cdn.glitch.com/37abfd5f-9e3a-41cb-ac22-75465ad6be1d%2Fstep10.png" alt="image"
+                        align="center" style="float: left; padding:20px " />
+                    <br />
+                    <br />
+                    <br />
+                    At the end we should have:
+
+                    <ol>
+                        <ul>
+                            - At: Golden key (Element) Master bedroom (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: Thomas (Element) Dungeon (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: Metal Key (Element) Dungeon (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: keypad code (Element) Secret room (Rooms).
+                        </ul>
+
+                    </ol>
+                </p>
+
+            </details>
         </span>
 
     </details>
+
+
+
+
+
+
 
 
 </body>
