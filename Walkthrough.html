@@ -896,30 +896,31 @@ Beside each image (the "alt" it says the name of the image file-->
                     <br />
                     At the end we should have:
                     <ol align="right">
-                        <ul>
-                            - Adjacent: Hallway (Rooms) Home library (Rooms).
-                        </ul>
+                        <em>
+                            <ul>
+                                - Adjacent: Hallway (Rooms) Home library (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Adjacent: Home library (Rooms) Hallway (Rooms).
-                        </ul>
+                            <ul>
+                                - Adjacent: Home library (Rooms) Hallway (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Adjacent: Home library (Rooms) Master bedroom (Rooms).
-                        </ul>
+                            <ul>
+                                - Adjacent: Home library (Rooms) Master bedroom (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Adjacent: Master bedroom (Rooms) Home library (Rooms).
-                        </ul>
+                            <ul>
+                                - Adjacent: Master bedroom (Rooms) Home library (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Adjacent: Master bedroom (Rooms) Main room (Rooms).
-                        </ul>
+                            <ul>
+                                - Adjacent: Master bedroom (Rooms) Main room (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Adjacent: Main room (Rooms) Master bedroom (Rooms).
-                        </ul>
-
+                            <ul>
+                                - Adjacent: Main room (Rooms) Master bedroom (Rooms).
+                            </ul>
+                        </em>
                     </ol>
                 </p>
                 <br />
@@ -949,22 +950,23 @@ Beside each image (the "alt" it says the name of the image file-->
                     At the end we should have:
 
                     <ol>
-                        <ul>
-                            - At: Golden key (Element) Master bedroom (Rooms).
-                        </ul>
+                        <em>
+                            <ul>
+                                - At: Golden key (Element) Master bedroom (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Locked: Thomas (Element) Dungeon (Rooms).
-                        </ul>
+                            <ul>
+                                - Locked: Thomas (Element) Dungeon (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Locked: Metal Key (Element) Dungeon (Rooms).
-                        </ul>
+                            <ul>
+                                - Locked: Metal Key (Element) Dungeon (Rooms).
+                            </ul>
 
-                        <ul>
-                            - Locked: keypad code (Element) Secret room (Rooms).
-                        </ul>
-
+                            <ul>
+                                - Locked: keypad code (Element) Secret room (Rooms).
+                            </ul>
+                        </em>
                     </ol>
                     <br />
                     <br />
@@ -995,10 +997,7 @@ Beside each image (the "alt" it says the name of the image file-->
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
+
                 <p>
                     Now we can finally start our prototype and see if it works.
                     <br />
@@ -1040,13 +1039,15 @@ Beside each image (the "alt" it says the name of the image file-->
                     Once you fire it the next information will appear in the States window:
                     <br />
                     <br />
-                    - The rule that was executed.
-                    <br />
-                    - The conditions that were in place, which allowed the rule to be fired.
-                    <br />
-                    - The new effects or the arguments that will appear in the new state.
-                    <br />
-                    - And, finally, the new state.
+                    <em>
+                        - The rule that was executed.
+                        <br />
+                        - The conditions that were in place, which allowed the rule to be fired.
+                        <br />
+                        - The new effects or the arguments that will appear in the new state.
+                        <br />
+                        - And, finally, the new state.
+                    </em>
                 </p>
 
                 <div>
@@ -1065,20 +1066,22 @@ Beside each image (the "alt" it says the name of the image file-->
                     Quiescence means that there are no more rules fireable, which could mean 1 of 3 things:
                     <br />
                     <ol align="right">
-                        <ul>
-                            - You have finished the game successfully (You have won).
-                        </ul>
+                        <em>
+                            <ul>
+                                - You have finished the game successfully (You have won).
+                            </ul>
 
-                        <ul>
-                            - You have finished the game unsuccessfully (You have lost).
-                        </ul>
+                            <ul>
+                                - You have finished the game unsuccessfully (You have lost).
+                            </ul>
 
-                        <ul>
-                            - You have found a bug.
-                            <br />
-                            A state in which you are stuck and can't take anymore actions, however you also haven't
-                            finished the game.
-                        </ul>
+                            <ul>
+                                - You have found a bug.
+                                <br />
+                                A state in which you are stuck and can't take anymore actions, however you also haven't
+                                finished the game.
+                            </ul>
+                        </em>
                     </ol>
                     The first two states are usually fine and we want the character to be able to reach it; however the
                     third option is one we definitely want to avoid. With that in mind, it is important that we test the
@@ -1138,11 +1141,9 @@ Beside each image (the "alt" it says the name of the image file-->
                 </div>
 
                 <br />
-                <br />
-                <br />
 
                 <p>
-                    Lastly, we have the filter; which allow us to keep track of certain states without have to search
+                    Lastly, we have the Filter; which allows us to keep track of certain states without have to search
                     for them in every new state.
                     <br />
                     To set up a filter you just click on "Add filter group" [<img src="images/filter_group.png"
@@ -1151,7 +1152,15 @@ Beside each image (the "alt" it says the name of the image file-->
                     <br />
                     Just like the Atoms, filters are just predicates. However, filters also allow us to add variables.
                     <br />
-                    We don' have to put them in every prototype we make, but it's a useful tool if we want to
+                    As an example, we can try to keep track of all the unlocked rooms Thomas passes through, so we add
+                    the filter:
+                    <em>
+                        <ul>
+                            - At: Thomas (Element) L (Rooms).
+                        </ul>
+                    </em>
+                    <br />
+                    We don't have to put them in every prototype we make, but it's a useful tool if we want to
                     keep track of a specific state or to make the new state easier to understand.
                 </p>
 
@@ -1159,8 +1168,28 @@ Beside each image (the "alt" it says the name of the image file-->
 
         </span>
     </details>
-    <!--
+
+    <details>
+        <summary style="font-size:30px; font-family:Impact; color: #c307ab;">
+            Examples Tab
+        </summary>
+        <span style="font-family:Bookman Old Style">
             <details>
+                <summary style="font-size:20px; color: orange;">
+                    Step 
+                </summary>
+
+                <p>
+
+                </p>
+
+            </details>
+
+        </span>
+    </details>
+
+    <!--
+    <details>
         <summary  style="font-size:30px; font-family:Impact; color: #c307ab;">
             Execution Tab
         </summary>
@@ -1178,6 +1207,7 @@ Beside each image (the "alt" it says the name of the image file-->
 
         </span>
     </details>
+
     -->
 
 
