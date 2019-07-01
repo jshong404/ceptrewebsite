@@ -8,7 +8,8 @@
     <script src="ui.js"></script>
     <script src="execution.js"></script>
     <script src="filter.js"></script>
-    <script async src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+    <script async
+        src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
 </head>
 
 <body>
@@ -132,12 +133,12 @@
                 <div class="wrapper" style="font-weight: 800; font-size: 26px; min-height: fit-contents;">
                     Filter
                     <hr>
-                    
+
                     <button class="delete_state" id="addFilterGroup" onclick="addFilterGroup(this.id)">Add Filter Group
                 </div>
             </div>
         </div>
-                    
+
         <div id="example">
             <div class="examples_state">
                 <div class="wrapper" style="font-weight: 800; font-size: 26px; min-height: fit-contents;">
@@ -185,7 +186,7 @@
                     </h5>
                     <a href="Ex.7_Castle_escape.txt" download>
                         <button class="btn" style="width:100%"><i class="fa fa-download"></i> Download Example</button>
-                    </a>                 </a>
+                    </a> </a>
                 </div>
             </div>
         </div>
@@ -203,11 +204,15 @@
         <button class="delete_state" id="initializeExecution" onclick="initializeExecution()">Start Execution</button>
         <div class="wrapper" style="font-weight: 800; font-size: 26px; height: 55%;">
             STATES
-            <div id="statePrinter" style="overflow-y: scroll; font-weight: 400; width: 100%; height: 80%; font-size: 22px; background:#ddd; white-space: pre-wrap;"></div>
+            <div id="statePrinter"
+                style="overflow-y: scroll; font-weight: 400; width: 100%; height: 80%; font-size: 22px; background:#ddd; white-space: pre-wrap;">
+            </div>
         </div>
         <div class="wrapper" style="font-weight: 800; font-size: 26px; height: 30%;">
             FILTERED STATE
-            <div id="filterPrinter" style="overflow-y: scroll; font-weight: 400; width: 100%; height: 80%; font-size: 22px; background:#ddd; white-space: pre-wrap;"></div>
+            <div id="filterPrinter"
+                style="overflow-y: scroll; font-weight: 400; width: 100%; height: 80%; font-size: 22px; background:#ddd; white-space: pre-wrap;">
+            </div>
         </div>
     </div>
 
