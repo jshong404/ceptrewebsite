@@ -8,7 +8,9 @@
   body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
     margin: 2em;
-    background-color:#ffffff
+    background-color:#ffffff;
+    max-width: 100%; 
+    display:block;
   }
   
   

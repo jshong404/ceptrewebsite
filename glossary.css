@@ -4,6 +4,8 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
+  max-width: 100%; 
+  display:block;
 }
 
 h1 {
