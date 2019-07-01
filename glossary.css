@@ -4,11 +4,12 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
+  max-width: 100%; 
+  display:block;
 }
 
 h1 {
   font-style: italic;
-  color: #00000;
 }
 
 /* The next two are for the subtitles in the tutorial page */

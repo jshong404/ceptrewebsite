@@ -5,11 +5,12 @@ body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
   text-align: block;
+  max-width: 100%; 
+  display:block;
 }
 
 h1 {
   font-style: italic;
-  color: #00000;
 }
 
 /* The next two are for the subtitles in the tutorial page */
@@ -24,6 +25,7 @@ a {
 
 div {
   display: block;
+
 }
 div-a{
   text-align: right;
@@ -33,7 +35,6 @@ section {
   display: inline-block;
   width: 25%;
 }
-
 
 header {
   background-color: #F1F1F1;
@@ -98,9 +99,6 @@ subnav a:hover {
   background-color: #E1E1E1;
   color: black;
 }
-
-
-
 
 
 

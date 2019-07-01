@@ -8,7 +8,9 @@
   body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
     margin: 2em;
-    background-color:#ffffff
+    background-color:#ffffff;
+    max-width: 100%; 
+    display:block;
   }
   
   
@@ -16,6 +18,7 @@
     font-style: italic;
     color: #006400;
     text-align: center;
+    vertical-align: center;
   }
   
   bold {
@@ -109,11 +112,6 @@
     border-top: 1px solid lightgrey;
     text-align: right;
     color: teal;
-  }
-  
-  h1 {
-    font-style: italic;
-    color: #00000;
   }
   
   header {
