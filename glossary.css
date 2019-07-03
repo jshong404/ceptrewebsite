@@ -3,7 +3,8 @@
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 5em;
+  background-color:#ffffff;
   max-width: 100%; 
   display:block;
 }
