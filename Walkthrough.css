@@ -9,6 +9,10 @@ body {
   display:block;
 }
 
+p {
+  max-width: 2000;
+}
+
 h1 {
   font-style: italic;
 }
