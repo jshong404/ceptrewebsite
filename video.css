@@ -16,7 +16,7 @@
   p {
     overflow: hidden;
   }
-  
+
   row {
     display: table;
     clear: both;
@@ -88,3 +88,7 @@
     background-color: #ddd;
     color: black;
   }
+
+iframe {
+  border: 10px outset #ddd;
+}
