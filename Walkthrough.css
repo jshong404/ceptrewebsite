@@ -12,6 +12,7 @@ body {
 p {
   max-width: 2000;
   text-align: start;
+  overflow: hidden;
 }
 
 h1 {
