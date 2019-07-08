@@ -15,10 +15,6 @@ p {
   overflow: hidden;
 }
 
-h1 {
-  font-style: italic;
-}
-
 /* The next two are for the subtitles in the tutorial page */
 h2{
   color: orange;
