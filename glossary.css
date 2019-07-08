@@ -54,7 +54,7 @@ topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
+/* This is so the link in the nav bar don't have the circle beside them, don't remove this or it will mess up the navigation bar */
 ul {
   list-style-type: none;
   margin: 0;
