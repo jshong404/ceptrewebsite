@@ -16,19 +16,19 @@ const dreamsForm = document.forms[0];
 const dreamInput = dreamsForm.elements['dream'];
 
 // a helper function that creates a list item for a given dream
-const appendNewDream = function(dream) {
+const appendNewDream = function (dream) {
   const newListItem = document.createElement('li');
   newListItem.innerHTML = dream;
   dreamsList.appendChild(newListItem);
 }
 
 // iterate through every dream and add it to our page
-dreams.forEach( function(dream) {
+dreams.forEach(function (dream) {
   appendNewDream(dream);
 });
 
 // listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = function(event) {
+dreamsForm.onsubmit = function (event) {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
