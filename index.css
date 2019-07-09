@@ -110,7 +110,7 @@ topnav a:hover {
 }
 
 .fling-minislide {
-  width:650px; 
+  width:100%; 
   height:300px; 
   overflow:hidden; 
   position:middle; 
