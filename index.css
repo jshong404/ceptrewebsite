@@ -110,7 +110,7 @@ topnav a:hover {
 }
 
 .fling-minislide {
-  width:100%; 
+  width:650px; 
   height:300px; 
   overflow:hidden; 
   position:middle; 
@@ -119,7 +119,7 @@ topnav a:hover {
   position:absolute; 
   animation:fling-minislide 20s infinite; 
   opacity:0; 
-  width: auto; 
+  width: 100%; 
   height: auto;
 }
 
