@@ -109,8 +109,19 @@ topnav a:hover {
   color: black;
 }
 
-.fling-minislide {width:650px; height:300px; overflow:hidden; position:center; }
-.fling-minislide img{ position:absolute; animation:fling-minislide 20s infinite; opacity:0; width: 100%; height: auto;}
+.fling-minislide {
+  width:650px; 
+  height:300px; 
+  overflow:hidden; 
+  position:middle; 
+}
+.fling-minislide img{ 
+  position:absolute; 
+  animation:fling-minislide 20s infinite; 
+  opacity:0; 
+  width: 100%; 
+  height: auto;
+}
 
 @keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
 .fling-minislide img:nth-child(4){animation-delay:0s;}
