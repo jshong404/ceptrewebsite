@@ -46,7 +46,7 @@ h4{
   text-align:right;
 }
   
-/* This one is for the logo in the header*/
+/* This one is for the logo in the header and the slide show*/
 div {
   display: block;
   width:100%;
@@ -108,12 +108,14 @@ topnav a:hover {
 }
 
 .fling-minislide {
-  width:100%; 
+  width:45%; 
   height:25%; 
   overflow:hidden; 
   position:relative; 
 }
-.fling-minislide img{ 
+.fling-minislide img{
+  width:650px; 
+  height:300px;
   position:absolute; 
   animation:fling-minislide 20s infinite; 
   opacity:0; 
