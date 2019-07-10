@@ -9,9 +9,13 @@ body {
   max-width: 100%; 
   display:block;
 }
-  
+
+ /* This one could still e used to make a character limit so the website doesn't look weird in bigger screens, but the reason why I didn't put that
+is because then it makes it weird for smaller screens; like when the user restores down the tab or if the uses the website on the phone */
+ 
 p {
   overflow: hidden;
+  max-width: 5000px;
 }
   
 h1 {
@@ -45,6 +49,7 @@ h4{
 /* This one is for the logo in the header*/
 div {
   display: block;
+  width:100%;
 }
 /* This one is for the emails to be aligned on the right */
 div-a{
@@ -58,13 +63,6 @@ ul {
   padding: 0;
 }
 
-/* This one could still e used to make a character limit so the website doesn't look weird in bigger screens, but the reason why I didn't put that
-is because then it makes it weird for smaller screens; like when the user restores down the tab or if the uses the website on the phone */
-p {
-  max-width: 5000px;
-}
-
-  
 li {
   margin-bottom: 5px;
 }
@@ -112,8 +110,7 @@ topnav a:hover {
 .fling-minislide {
   width:650px; 
   height:300px; 
-  overflow:hidden; 
-  position:middle; 
+  overflow:hidden;  
 }
 .fling-minislide img{ 
   position:absolute; 
