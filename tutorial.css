@@ -87,14 +87,6 @@ subnav a:hover {
   
 section {
   display: inline-block;
-  width: 30%;
-  float: center;
-  margin: 20px;
-}
-  
-lowsection {
-  display: inline-block;
-  width: 45%;
-  float: right;
+  width: 29%;
   margin: 20px;
 }
