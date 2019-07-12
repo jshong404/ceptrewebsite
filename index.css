@@ -125,7 +125,6 @@ topnav a:hover {
       background-size: cover;
     animation:fade 20s infinite;
 -webkit-animation:fade 20s infinite;
-
 } 
 .slide2 {
   background: url(Stock/b.png)no-repeat center;
