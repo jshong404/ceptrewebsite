@@ -61,11 +61,32 @@ div-a{
   text-align: right;
 }
  
-/* This is so the link in the nav bar don't have the circle beside them, don't remove this or it will mess up the navigation bar */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
   
 footer {
@@ -80,32 +101,6 @@ header {
   background-color: #F1F1F1;
   text-align: center;
   padding: 20px;
-}
-  
-navbar {
-  background-color:black;
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-}
-  
-topnav {
-  overflow: hidden;
-  background-color: #333;
-  text-align: center;
-}
-  
-topnav a {
-  float: left;
-  display: block;
-  color: #ffffff;
-  padding: 15px 20px;
-  text-decoration: none;
-}
-  
-topnav a:hover {
-  background-color: #ddd;
-  color: black;
 }
 
 .slider {
@@ -183,33 +178,4 @@ topnav a:hover {
   50% { opacity: 0}
   75% { opacity: 1}
   100% { opacity:0}
-}
-
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
 }
