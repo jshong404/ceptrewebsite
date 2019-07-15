@@ -11,7 +11,7 @@ body {
 p {
   max-width: 2000;
   text-align: start;
-  overflow: hidden;
+  font-size: 15px;
 }
 
 /* The next two are for the subtitles in the tutorial page */

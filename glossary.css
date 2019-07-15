@@ -11,7 +11,7 @@ body {
 }
 
 p {
-  overflow: hidden;
+  font-size: 15px;
 }
 
 /* The next two are for the subtitles in the tutorial page */
@@ -61,6 +61,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 /* This is for the gray, smaller navigation bar*/
 subnavbar {
   background-color:#CFCFCF;

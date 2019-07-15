@@ -15,8 +15,8 @@ body {
 is because then it makes it weird for smaller screens; like when the user restores down the tab or if the uses the website on the phone */
  
 p {
-  overflow: hidden;
   max-width: 5000px;
+  font-size: 15px;
 }
   
 h1 {
