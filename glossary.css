@@ -1,6 +1,11 @@
 /* CSS files add styling rules to your content */
 /*The images' size is 1200x1200 pixels*/
 
+@font-face {
+  src: url(font/Quicksand-Light.ttf);
+  font-family: Quicksand;
+}
+
 body {
   font-family: 'Quicksand', 'Bookman Old Style', "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
