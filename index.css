@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
   
+@font-face {
+  src: url(font/Quicksand-Light.ttf);
+  font-family: quicksand;
+}
+
 body {
   font-family: 'Quicksand', 'Bookman Old Style', "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
