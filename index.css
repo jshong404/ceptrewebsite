@@ -5,9 +5,10 @@
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
-  background-color:#ffffff;
+  text-align: block;
   max-width: 100%; 
   display:block;
+  background-color:#ffffff;
 }
 
  /* This one could still e used to make a character limit so the website doesn't look weird in bigger screens, but the reason why I didn't put that
@@ -60,10 +61,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-li {
-  margin-bottom: 5px;
 }
   
 footer {
