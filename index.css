@@ -64,6 +64,7 @@ div-a{
 #navbar {
   overflow: hidden;
   background-color: #333;
+  z-index: 99999;
 }
 
 #navbar a {
