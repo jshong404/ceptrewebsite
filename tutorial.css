@@ -89,4 +89,6 @@ section {
   display: inline-block;
   width: 29%;
   margin: 20px;
+  border:1px solid black;
+  padding: 5px;
 }
