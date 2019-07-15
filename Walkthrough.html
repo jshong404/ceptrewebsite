@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/logooooooo2.png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="Walkthrough.css">
 
@@ -53,22 +55,22 @@ install a spellchecker if what you need to check are typos.-->
     </h1>
 
 
-    <span style="font-family:Bookman Old Style;">
 
-        <p>
-            Welcome to the Ceptre Editor Walkthrough!
-            <br />
-            <br />
-            In this page we will be making a simple project so that you can learn how the Ceptre Editor works.
-            <br />
-            <br />
-            This steps will be in chronological order, however you can always experiment with how you are most
-            comfortable with.
-            <br />
-            <br />
-            Let's begin!
-        </p>
-    </span>
+
+    <p>
+        Welcome to the Ceptre Editor Walkthrough!
+        <br />
+        <br />
+        In this page we will be making a simple project so that you can learn how the Ceptre Editor works.
+        <br />
+        <br />
+        This steps will be in chronological order, however you can always experiment with how you are most
+        comfortable with.
+        <br />
+        <br />
+        Let's begin!
+    </p>
+
     <!-- The step number of the images do not match the step number they are in. It it just their order.
 Beside each image (the "alt" it says the name of the image file-->
     <details>
@@ -76,677 +78,674 @@ Beside each image (the "alt" it says the name of the image file-->
             Editor Tab
         </summary>
 
-        <span style="font-family:Bookman Old Style">
 
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 1
-                </summary>
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 1
+            </summary>
 
-                <p>
-                    To start with, have a concept already in mind.
-                    <br />
-                    <br />
-                </p>
+            <p>
+                To start with, have a concept already in mind.
                 <br />
                 <br />
+            </p>
+            <br />
+            <br />
 
-                <div>
-                    <img src="images/concept.png" alt="concept" align="center"
-                        style="float: left; max-width: 100%; display:block;" />
-                </div>
+            <div>
+                <img src="images/concept.png" alt="concept" align="center"
+                    style="float: left; max-width: 100%; display:block;" />
+            </div>
 
-                <p>
-                    Usually this would mean to have an idea of what we want the player to be able to do; the objects,
-                    locations, characters and, if necessary, a map of our world.
-                    <br />
-                    However, trial and error is always an option, especially if you are not familiar with Ceptre.
-                </p>
+            <p>
+                Usually this would mean to have an idea of what we want the player to be able to do; the objects,
+                locations, characters and, if necessary, a map of our world.
+                <br />
+                However, trial and error is always an option, especially if you are not familiar with Ceptre.
+            </p>
 
+            <br />
+            <br />
+            <br />
+
+            <p>
+                For this case we are going to make a map in which the main character "Thomas" is trying to escape a
+                castle by collecting some items.
                 <br />
                 <br />
+                In this rough concept we already have an idea of what the rules of this world will be:
                 <br />
-
-                <p>
-                    For this case we are going to make a map in which the main character "Thomas" is trying to escape a
-                    castle by collecting some items.
-                    <br />
-                    <br />
-                    In this rough concept we already have an idea of what the rules of this world will be:
-                    <br />
-                    Thomas will only be able to move from one room to another if the rooms are beside each other and if
-                    the
-                    entrance is open.
-                    <br />
-                    We also know which items are needed to be able to advance in the "game", where they are and where
-                    they
-                    will be needed.
-                    <br />
-                    <br />
-                    Finally, we also know what the goal is: Escape the castle.
-                </p>
-
+                Thomas will only be able to move from one room to another if the rooms are beside each other and if
+                the
+                entrance is open.
+                <br />
+                We also know which items are needed to be able to advance in the "game", where they are and where
+                they
+                will be needed.
                 <br />
                 <br />
+                Finally, we also know what the goal is: Escape the castle.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+        </details>
+
+
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 2
+            </summary>
+
+
+            <p>
+                Now we will add the elements we saw in the concept into the project.
                 <br />
                 <br />
+                To start with, Navigate to the Editor Tab of the Ceptre Editor
+                [<img src="images/editor_tab_(small).png"
+                    style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="editor_tab_(small)">]
+                and locate the Sets.
+            </p>
+
+            <div>
+                <img src="images/Step1.png" alt="Step1" align="center"
+                    style="float: left; max-width: 100%; display:block;" />
+            </div>
+
+            <br />
+            <br />
+
+            <p>
+                Select the option to Add a New Set, a dialogue box will appear from the website which will allow us
+                to
+                name it [Note: We cannot add spaces to the names so use the "_" to avoid confusion.]
                 <br />
                 <br />
+                A Set is just a group of elements that share or will share a common characteristic or behavior,
+                think of it like semantic fields.
                 <br />
                 <br />
+                To start with this example we will make a Set named "elements."
+                <br />
+                In this Set we will add Thomas and the items (The metal key, the golden key and the keypad code).
                 <br />
                 <br />
-                <br />
+                It isn't imperative that we put them together, however in the next sections it will save us time
+                since
+                the way that they "behave" is very similar. The items will only need to exist within the rooms and
+                be
+                able to interact with Thomas.
+            </p>
 
+            <br />
 
-            </details>
+            <div>
+                <img src="images/step2.png" alt="Step2" align="center"
+                    style="float: right; max-width: 100%; display:block;" />
+            </div>
 
-
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 2
-                </summary>
-
-
-                <p>
-                    Now we will add the elements we saw in the concept into the project.
-                    <br />
-                    <br />
-                    To start with, Navigate to the Editor Tab of the Ceptre Editor
-                    [<img src="images/editor_tab_(small).png"
-                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="editor_tab_(small)">]
-                    and locate the Sets.
-                </p>
-
-                <div>
-                    <img src="images/Step1.png" alt="Step1" align="center"
-                        style="float: left; max-width: 100%; display:block;" />
-                </div>
-
+            <p align="right" style=" text-align: right;">
                 <br />
                 <br />
-
-                <p>
-                    Select the option to Add a New Set, a dialogue box will appear from the website which will allow us
-                    to
-                    name it [Note: We cannot add spaces to the names so use the "_" to avoid confusion.]
-                    <br />
-                    <br />
-                    A Set is just a group of elements that share or will share a common characteristic or behavior,
-                    think of it like semantic fields.
-                    <br />
-                    <br />
-                    To start with this example we will make a Set named "elements."
-                    <br />
-                    In this Set we will add Thomas and the items (The metal key, the golden key and the keypad code).
-                    <br />
-                    <br />
-                    It isn't imperative that we put them together, however in the next sections it will save us time
-                    since
-                    the way that they "behave" is very similar. The items will only need to exist within the rooms and
-                    be
-                    able to interact with Thomas.
-                </p>
-
-                <br />
-
-                <div>
-                    <img src="images/step2.png" alt="Step2" align="center"
-                        style="float: right; max-width: 100%; display:block;" />
-                </div>
-
-                <p align="right" style=" text-align: right;">
-                    <br />
-                    <br />
-                    We will also add another two Sets called "rooms" and "trapped."
-                    <br />
-                    <br />
-                    "Rooms" are all the rooms that Thomas will be able to move back and forth as well as interact with
-                    the
-                    items in them:
-                    "hallway", "home_library", "master_bedroom", "main_room", "road_home."
-                    <br />
-                    <br />
-                    "Trapped" will be used for rooms that Thomas can't interact with until they can use the respective
-                    key:
-                    "dungeon" and "secret room".
-                    <br />
-                </p>
-
+                We will also add another two Sets called "rooms" and "trapped."
                 <br />
                 <br />
+                "Rooms" are all the rooms that Thomas will be able to move back and forth as well as interact with
+                the
+                items in them:
+                "hallway", "home_library", "master_bedroom", "main_room", "road_home."
+                <br />
+                <br />
+                "Trapped" will be used for rooms that Thomas can't interact with until they can use the respective
+                key:
+                "dungeon" and "secret room".
+                <br />
+            </p>
+
+            <br />
+            <br />
+            <br />
+
+        </details>
+
+        <details>
+
+            <summary style="font-size:20px; color: orange;">
+                Step 3
+            </summary>
+
+
+            <div>
+                <img src="images/step3.png" alt="Step3" align="center"
+                    style="float: left; max-width: 100%; display:block;" />
+            </div>
+
+            <p>
+                Next we will add the Predicates.
+                <br />
+                In simple terms a Predicate are states that can exist in our world, they can be composed of
+                "arguments", which are Sets that are involved in said state, and usually indicate how an element
+                will
+                interact with another one. Otherwise it can be an state that exists on it's own.
+                <br />
+                <br />
+                In this example we have 4 Predicates:
                 <br />
 
-            </details>
-
-            <details>
-
-                <summary style="font-size:20px; color: orange;">
-                    Step 3
-                </summary>
-
-
-                <div>
-                    <img src="images/step3.png" alt="Step3" align="center"
-                        style="float: left; max-width: 100%; display:block;" />
-                </div>
-
-                <p>
-                    Next we will add the Predicates.
+                <ol>
+                    <li>
+                        <strong>Locked</strong>
+                    </li>
                     <br />
-                    In simple terms a Predicate are states that can exist in our world, they can be composed of
-                    "arguments", which are Sets that are involved in said state, and usually indicate how an element
+                    As the name suggests, this state should represent an element being in a room that they can't get
+                    out.
+                    <br />
+                    It is composed of two arguments:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Element: A character or an item
+                            <br />
+                            - Trapped: A room that cannot be interacted until Thomas has a key.
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    <li>
+                        <strong>At</strong>
+                    </li>
+                    <br />
+                    This Predicate is similar to the previous one as they both indicate the location of an element,
+                    however in this one the elements <em>can</em> move between the rooms.
+                    <br />
+                    It is composed of two arguments:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Element: A character or an item.
+                            <br />
+                            - Rooms: The rooms that Thomas will be able to move in and out without the need of a
+                            key.
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Equip</strong>
+                    </li>
+                    <br />
+                    In this world we want Thomas to be able to pick up and equip elements that they can use.
+                    <br />
+                    It is composed of two arguments:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Element: A character or an item. Once we make the rules this element will be Thomas.
+                            <br />
+                            - Element: A character or an item. Once we make the rules this element will be the items
+                            that
+                            Thomas can pick up.
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Adjacent</strong>
+                    </li>
+                    <br />
+                    This Predicate will indicate which rooms are beside each other and once we make the Rules it
                     will
-                    interact with another one. Otherwise it can be an state that exists on it's own.
+                    allows us to make Thomas only be able to move between rooms that are beside each other.
+                    <br />
+                    It is composed of two arguments, however they are the same Sets:
                     <br />
                     <br />
-                    In this example we have 4 Predicates:
-                    <br />
+                    <ul>
+                        <em>
+                            - Rooms: The rooms that Thomas will be able to move in and out without the need of a
+                            key.
+                        </em>
+                    </ul>
+                </ol>
 
-                    <ol>
-                        <li>
-                            <strong>Locked</strong>
-                        </li>
-                        <br />
-                        As the name suggests, this state should represent an element being in a room that they can't get
-                        out.
-                        <br />
-                        It is composed of two arguments:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Element: A character or an item
-                                <br />
-                                - Trapped: A room that cannot be interacted until Thomas has a key.
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        <li>
-                            <strong>At</strong>
-                        </li>
-                        <br />
-                        This Predicate is similar to the previous one as they both indicate the location of an element,
-                        however in this one the elements <em>can</em> move between the rooms.
-                        <br />
-                        It is composed of two arguments:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Element: A character or an item.
-                                <br />
-                                - Rooms: The rooms that Thomas will be able to move in and out without the need of a
-                                key.
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Equip</strong>
-                        </li>
-                        <br />
-                        In this world we want Thomas to be able to pick up and equip elements that they can use.
-                        <br />
-                        It is composed of two arguments:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Element: A character or an item. Once we make the rules this element will be Thomas.
-                                <br />
-                                - Element: A character or an item. Once we make the rules this element will be the items
-                                that
-                                Thomas can pick up.
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Adjacent</strong>
-                        </li>
-                        <br />
-                        This Predicate will indicate which rooms are beside each other and once we make the Rules it
-                        will
-                        allows us to make Thomas only be able to move between rooms that are beside each other.
-                        <br />
-                        It is composed of two arguments, however they are the same Sets:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Rooms: The rooms that Thomas will be able to move in and out without the need of a
-                                key.
-                            </em>
-                        </ul>
-                    </ol>
+                <strong>Note:</strong>
+                <br />
+                <br />
+                Remember to lock
+                [<img src="images/lock_and_unlock(small).png"
+                    style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="lock_and_unlock(small)">]
+                the Predicates so they can be applicable later.
+                <br />
+                Additionally, if we want to change the Predicates after making the rules they will not change
+                automatically, instead they will be erased so be mindful of the changes we make.
 
+            </p>
+
+        </details>
+
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 4
+            </summary>
+
+            <div>
+                <img src="images/step4.png" alt="step4" align="center"
+                    style="float: left; max-width: 100%; display:block;" />
+            </div>
+
+            <p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                Now we will be adding the rules in which our world will be working on.
+                <br />
+                First, navigate to the "Add rule" button and select it. A new menu should appear.
+                <br />
+                <br />
+                After that select the "+" to Add a New condition or effect.
+                <br />
+                <br />
+                <br />
+                <br />
+            </p>
+
+
+            <br />
+            <br />
+
+            <div>
+                <img src="images/step5.png" alt="step5" align="right"
+                    style="float: right; padding:20px; max-width: 100%; display:block;" />
+            </div>
+
+            <p align="right" style="text-align: right;">
+
+                <br />
+                <br />
+                The way rules work are as follows:
+                <br />
+                <br />
+                * There are some conditions that need to be fulfilled before a Rule can be fired (Executed). *
+                <br />
+                * Conditions are Predicates and need to be organized in a certain way to make the rule
+                applicable. *
+                <br />
+                * The conditions can disappear after the rule is fired, but this isn't mandatory.
+                <br />
+                To delete a condition we only need to check the box under remove *
+                <br />
+                * Rule must have at least one effect. *
+                <br />
+                * We can create variables in the Conditions, but we can't in the Effects.
+                <br />
+                However we can use variables created in Conditions in our Effects. *
+            </p>
+
+            <p>
+                <br />
+                <br />
+                For this example we will be making 8 rules. In reality it is very unlikely that we will be able to
+                know
+                the exact number of rules that we will be needed, which is when the Trial and Error method will
+                most
+                likely be the most useful.
+
+                <br />
+                <br />
+                <br />
+                Since the "game" will begin with Thomas being locked up in the "locked_dungeon", it would be
+                best to
+                make the rules in the order the player will most likely need them.
+                <br />
+                As we saw in the map during Step 1, we know that there is a jey Thomas will need to escape the
+                dungeon, so we'll start with that.
+            </p>
+            <br />
+            <br />
+
+            <div>
+                <img src="images/step6.png" alt="step6" align="center"
+                    style="float: left; padding:20px; max-width: 100%; display:block;" />
+            </div>
+
+            <p>
+                <ol>
+
+                    <li>
+                        <strong>Pick up metal key</strong>
+                    </li>
+                    This rule requires two Conditions; which, as we covered before, are the Predicates we previously
+                    made:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Locked: Thomas (Element) is in the locked dungeon (trapped).
+                            <br />
+                            - Locked: Metal key (Element) is in the locked dungeon (trapped).
+                        </em>
+                    </ul>
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Equip: metal key (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    This should roughly read as Thomas having equipped the metal key.
+                    <br />
+                    <br />
+                    Lastly, check the box beside the second condition. This will make the key disappear from the
+                    locked dungeon, since Thomas has already equipped it.
+                    <br />
+                    <br />
                     <strong>Note:</strong>
+                    At this step we could go ahead to the Initial State tab so we can try and see if our
+                    program is working, otherwise we can continue with the walkthrough.
                     <br />
                     <br />
-                    Remember to lock
-                    [<img src="images/lock_and_unlock(small).png"
-                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none"
-                        alt="lock_and_unlock(small)">]
-                    the Predicates so they can be applicable later.
-                    <br />
-                    Additionally, if we want to change the Predicates after making the rules they will not change
-                    automatically, instead they will be erased so be mindful of the changes we make.
 
-                </p>
+                    <li>
+                        <strong>Leave dungeon</strong>
+                    </li>
+                    <br />
+                    This rule requires two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Locked: Thomas (Element) is in the locked dungeon (trapped).
+                            <br />
+                            - Equip: Metal key (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    This option should only appear after Thomas has equipped the metal key, which is why the
+                    predicate "equip" is in the conditions.
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in the Hallway (Rooms).
+                        </em>
+                    </ul>
+                    <br />
+                    The remove box of the first condition should be checked, which should remove Thomas from the
+                    locked dungeon after the rule is fired.
 
-            </details>
-
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 4
-                </summary>
-
-                <div>
-                    <img src="images/step4.png" alt="step4" align="center"
-                        style="float: left; max-width: 100%; display:block;" />
-                </div>
-
-                <p>
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    Now we will be adding the rules in which our world will be working on.
-                    <br />
-                    First, navigate to the "Add rule" button and select it. A new menu should appear.
-                    <br />
-                    <br />
-                    After that select the "+" to Add a New condition or effect.
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                </p>
 
 
-                <br />
-                <br />
 
-                <div>
-                    <img src="images/step5.png" alt="step5" align="right"
+                    <img src="images/step7.png" alt="step7" align="center"
                         style="float: right; padding:20px; max-width: 100%; display:block;" />
-                </div>
-
-                <p align="right" style="text-align: right;">
-
-                    <br />
-                    <br />
-                    The way rules work are as follows:
-                    <br />
-                    <br />
-                    * There are some conditions that need to be fulfilled before a Rule can be fired (Executed). *
-                    <br />
-                    * Conditions are Predicates and need to be organized in a certain way to make the rule
-                    applicable. *
-                    <br />
-                    * The conditions can disappear after the rule is fired, but this isn't mandatory.
-                    <br />
-                    To delete a condition we only need to check the box under remove *
-                    <br />
-                    * Rule must have at least one effect. *
-                    <br />
-                    * We can create variables in the Conditions, but we can't in the Effects.
-                    <br />
-                    However we can use variables created in Conditions in our Effects. *
-                </p>
-
-                <p>
-                    <br />
-                    <br />
-                    For this example we will be making 8 rules. In reality it is very unlikely that we will be able to
-                    know
-                    the exact number of rules that we will be needed, which is when the Trial and Error method will
-                    most
-                    likely be the most useful.
-
-                    <br />
-                    <br />
-                    <br />
-                    Since the "game" will begin with Thomas being locked up in the "locked_dungeon", it would be
-                    best to
-                    make the rules in the order the player will most likely need them.
-                    <br />
-                    As we saw in the map during Step 1, we know that there is a jey Thomas will need to escape the
-                    dungeon, so we'll start with that.
-                </p>
-                <br />
-                <br />
-
-                <div>
-                    <img src="images/step6.png" alt="step6" align="center"
-                        style="float: left; padding:20px; max-width: 100%; display:block;" />
-                </div>
-
-                <p>
-                    <ol>
-
-                        <li>
-                            <strong>Pick up metal key</strong>
-                        </li>
-                        This rule requires two Conditions; which, as we covered before, are the Predicates we previously
-                        made:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Locked: Thomas (Element) is in the locked dungeon (trapped).
-                                <br />
-                                - Locked: Metal key (Element) is in the locked dungeon (trapped).
-                            </em>
-                        </ul>
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Equip: metal key (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        This should roughly read as Thomas having equipped the metal key.
-                        <br />
-                        <br />
-                        Lastly, check the box beside the second condition. This will make the key disappear from the
-                        locked dungeon, since Thomas has already equipped it.
-                        <br />
-                        <br />
-                        <strong>Note:</strong>
-                        At this step we could go ahead to the Initial State tab so we can try and see if our
-                        program is working, otherwise we can continue with the walkthrough.
-                        <br />
-                        <br />
-
-                        <li>
-                            <strong>Leave dungeon</strong>
-                        </li>
-                        <br />
-                        This rule requires two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Locked: Thomas (Element) is in the locked dungeon (trapped).
-                                <br />
-                                - Equip: Metal key (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        This option should only appear after Thomas has equipped the metal key, which is why the
-                        predicate "equip" is in the conditions.
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in the Hallway (Rooms).
-                            </em>
-                        </ul>
-                        <br />
-                        The remove box of the first condition should be checked, which should remove Thomas from the
-                        locked dungeon after the rule is fired.
-
-                        <br />
-                        <br />
 
 
+                    <li>
+                        <strong>Move</strong>
+                    </li>
+                    <br />
+                    Now we finally create the rule to move Thomas between rooms, as well as use the "variable"
+                    feature of the Ceptre.
+                    <br />
+                    This rule requires two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in room L (Rooms).
+                        </em>
+                        <br />
+                        <br />
+                        In the second argument of the Predicate we will want to select the option "New variable".
+                        <br />
+                        A new dialogue box will appear and we'll be able to name the Variable and name it as w
+                        wish, in this case we can just named it "L" (to indicate "location").
+                        <br />
+                        A variable means that any element of the set could be filling this field and the rule can
+                        still be fired.
+                        <br />
+                        <br />
+                        <br />
+                        <em>
+                            - Adjacent: L (Rooms) is beside L2 (Rooms).
+                        </em>
+                        <br />
+                        <br />
+                        This predicate should indicate that Thomas can't move between rooms that aren't beside each
+                        other.
+                        <br />
+                        In the second argument of this predicate we will also add a new variable. We can, again,
+                        name it as we wish.
+                        <br />
+                    </ul>
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in room L2 (Rooms).
+                        </em>
+                    </ul>
+                    <br />
+                    In the end we should be able to read this rule as:
+                    <br />
+                    If Thomas is in room L and room L and room L2 are adjacent, then we can move Thomas to room L2.
+                    <br />
+                    The remove box of the first condition should be checked, which should remove Thomas from the
+                    original room (as they cannot be in two rooms at the same time).
+                    <br />
+                    <br />
 
-                        <img src="images/step7.png" alt="step7" align="center"
-                            style="float: right; padding:20px; max-width: 100%; display:block;" />
+                    <li>
+                        <strong>Pick up golden key</strong>
+                    </li>
 
-
-                        <li>
-                            <strong>Move</strong>
-                        </li>
-                        <br />
-                        Now we finally create the rule to move Thomas between rooms, as well as use the "variable"
-                        feature of the Ceptre.
-                        <br />
-                        This rule requires two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in room L (Rooms).
-                            </em>
+                    <br />
+                    This rule is very similar to the one in the first one, the only difference being that the key is
+                    in a different room.
+                    <br />
+                    It requires two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in the master bedroom (Rooms).
                             <br />
+                            - At: Golden key (Element) is in the master bedroom (Rooms).
+                        </em>
+                    </ul>
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Equip: Golden key (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    This should roughly read as Thomas having equipped the golden key.
+                    <br />
+                    <br />
+                    Lastly, check the box beside the second condition. This will make the key disappear from the
+                    master bedroom, since Thomas has already equipped it.
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Enter secret room</strong>
+                    </li>
+
+                    <br />
+                    This rule can be fired after Thomas equips the golden key since we don't want them to be able to
+                    enter the secret room without said key.
+                    <br />
+                    It requires two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in the the home library (Rooms).
                             <br />
-                            In the second argument of the Predicate we will want to select the option "New variable".
+                            - Equip: Golden key (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Locked: Thomas (Element) is in the secret room (trapped).
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    Lastly, check the box beside the first condition. This will remove Thomas from the home library
+                    and into the secret room, it isn't a cloning room after all.
+                    <br />
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Take keypad code</strong>
+                    </li>
+
+                    <br />
+                    Now, this is the last item Thomas will need to collect to be able to escape.
+                    <br />
+                    It needs two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Locked: Thomas (Element) is in the secret room (trapped)
                             <br />
-                            A new dialogue box will appear and we'll be able to name the Variable and name it as w
-                            wish, in this case we can just named it "L" (to indicate "location").
+                            - Locked: Keypad code (Element) is in the secret room (trapped)
+                        </em>
+                    </ul>
+                    <br />
+                    Once these conditions are filled, the result of the rule firing would be:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Equip: Keypad code (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    And finally, check the box to remove the second condition (this would mean that after the rule
+                    is fired the keypad code will disappear from the room as Thomas has equipped it.)
+                    <br />
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Leave secret room</strong>
+                    </li>
+
+                    <br />
+                    This rule is much simpler than the other ones since it only needs Thomas to be in the secret
+                    room without any other prerequisite.
+                    <br />
+                    It needs only one Condition:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - Locked: Thomas (Element) is in the secret room (trapped)
+                        </em>
+                    </ul>
+                    <br />
+                    The result would simply take Thomas back to the home library:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in the the master bedroom (Rooms).
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    And lastly, check the box next to the condition to remove it. This would delete Thomas from the
+                    secret room.
+                    <br />
+
+
+                    <br />
+                    <br />
+                    <br />
+                    <li>
+                        <strong>Leave creepy house</strong>
+                    </li>
+
+                    <br />
+                    And with this rule we have reached what would be the end of the game.
+                    <br />
+                    It needs two Conditions:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is in the the main room (Rooms).
                             <br />
-                            A variable means that any element of the set could be filling this field and the rule can
-                            still be fired.
-                            <br />
-                            <br />
-                            <br />
-                            <em>
-                                - Adjacent: L (Rooms) is beside L2 (Rooms).
-                            </em>
-                            <br />
-                            <br />
-                            This predicate should indicate that Thomas can't move between rooms that aren't beside each
-                            other.
-                            <br />
-                            In the second argument of this predicate we will also add a new variable. We can, again,
-                            name it as we wish.
-                            <br />
-                        </ul>
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in room L2 (Rooms).
-                            </em>
-                        </ul>
-                        <br />
-                        In the end we should be able to read this rule as:
-                        <br />
-                        If Thomas is in room L and room L and room L2 are adjacent, then we can move Thomas to room L2.
-                        <br />
-                        The remove box of the first condition should be checked, which should remove Thomas from the
-                        original room (as they cannot be in two rooms at the same time).
-                        <br />
-                        <br />
+                            - Equip: Keypad code (Element) Thomas (Element).
+                        </em>
+                    </ul>
+                    <br />
+                    The result would finally put Thomas on their way home, wherever that is:
+                    <br />
+                    <br />
+                    <ul>
+                        <em>
+                            - At: Thomas (Element) is on their road home (Rooms).
+                        </em>
+                    </ul>
+                    <br />
+                    <br />
+                    And lastly, check the box next to the first condition to remove it, removing Thomas from the
+                    creepy house.
+                    <br />
 
-                        <li>
-                            <strong>Pick up golden key</strong>
-                        </li>
+                </ol>
 
-                        <br />
-                        This rule is very similar to the one in the first one, the only difference being that the key is
-                        in a different room.
-                        <br />
-                        It requires two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in the master bedroom (Rooms).
-                                <br />
-                                - At: Golden key (Element) is in the master bedroom (Rooms).
-                            </em>
-                        </ul>
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Equip: Golden key (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        This should roughly read as Thomas having equipped the golden key.
-                        <br />
-                        <br />
-                        Lastly, check the box beside the second condition. This will make the key disappear from the
-                        master bedroom, since Thomas has already equipped it.
+            </p>
 
 
-                        <br />
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Enter secret room</strong>
-                        </li>
-
-                        <br />
-                        This rule can be fired after Thomas equips the golden key since we don't want them to be able to
-                        enter the secret room without said key.
-                        <br />
-                        It requires two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in the the home library (Rooms).
-                                <br />
-                                - Equip: Golden key (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Locked: Thomas (Element) is in the secret room (trapped).
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        Lastly, check the box beside the first condition. This will remove Thomas from the home library
-                        and into the secret room, it isn't a cloning room after all.
-                        <br />
-
-
-                        <br />
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Take keypad code</strong>
-                        </li>
-
-                        <br />
-                        Now, this is the last item Thomas will need to collect to be able to escape.
-                        <br />
-                        It needs two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Locked: Thomas (Element) is in the secret room (trapped)
-                                <br />
-                                - Locked: Keypad code (Element) is in the secret room (trapped)
-                            </em>
-                        </ul>
-                        <br />
-                        Once these conditions are filled, the result of the rule firing would be:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Equip: Keypad code (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        And finally, check the box to remove the second condition (this would mean that after the rule
-                        is fired the keypad code will disappear from the room as Thomas has equipped it.)
-                        <br />
-
-
-                        <br />
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Leave secret room</strong>
-                        </li>
-
-                        <br />
-                        This rule is much simpler than the other ones since it only needs Thomas to be in the secret
-                        room without any other prerequisite.
-                        <br />
-                        It needs only one Condition:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - Locked: Thomas (Element) is in the secret room (trapped)
-                            </em>
-                        </ul>
-                        <br />
-                        The result would simply take Thomas back to the home library:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in the the master bedroom (Rooms).
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        And lastly, check the box next to the condition to remove it. This would delete Thomas from the
-                        secret room.
-                        <br />
-
-
-                        <br />
-                        <br />
-                        <br />
-                        <li>
-                            <strong>Leave creepy house</strong>
-                        </li>
-
-                        <br />
-                        And with this rule we have reached what would be the end of the game.
-                        <br />
-                        It needs two Conditions:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is in the the main room (Rooms).
-                                <br />
-                                - Equip: Keypad code (Element) Thomas (Element).
-                            </em>
-                        </ul>
-                        <br />
-                        The result would finally put Thomas on their way home, wherever that is:
-                        <br />
-                        <br />
-                        <ul>
-                            <em>
-                                - At: Thomas (Element) is on their road home (Rooms).
-                            </em>
-                        </ul>
-                        <br />
-                        <br />
-                        And lastly, check the box next to the first condition to remove it, removing Thomas from the
-                        creepy house.
-                        <br />
-
-                    </ol>
-
-                </p>
-
-
-            </details>
-        </span>
+        </details>
 
     </details>
 
@@ -756,219 +755,217 @@ Beside each image (the "alt" it says the name of the image file-->
             Initial State Tab
         </summary>
 
-        <span style="font-family:Bookman Old Style">
 
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 5
-                </summary>
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 5
+            </summary>
 
-                <p>
-                    Now we will be moving to the Initial State Tab [<img src="images/initial_state_tab.png"
-                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none;" alt="initial_state_tab">].
-                    <br />
-                    The Initial State is the state of execution our program will begin in.
-                    <br />
-                    In this example we only have to think of it in two ways:
-                    <ol>
-                        <ul>
-                            The building of our map, which will most likely stay stagnant.
-                            <br />
-                            In this case, the rooms (including the locked ones) will not change at all throughout all
-                            the "playthrough."
-                        </ul>
-
-                        <br />
-                        <br />
-                        <br />
-
-                        <ul>
-                            The first position of our elements. These will change in the playthroughs, but when we
-                            start the "game" again these elements will go back to the position we put them in.
-                            <br />
-                            In this case, the items and Thomas will all start in specific positions, however they will
-                            be moved or mutated in the game.
-                            <br />
-                            Once we start the game again Thomas and the items will go back to their first positions.
-                        </ul>
-                    </ol>
-                </p>
-                <p>
-                    With that in mind we will start by making the map.
-                    <br />
-                    <br />
-                    Bringing back the concept we saw in Step 1 and the predicate "Adjacent" we saw in Step 3:
-                    <br />
-                </p>
-
-                <div style="text-align:center;">
-                    <img src="images/concept.png" alt="concept" style="max-width: 100%;" align="center" />
-                    <img src="images/step3.png" alt="step3" style="max-width: 100%;" align="center" />
-                </div>
-
-                </div>
-
+            <p>
+                Now we will be moving to the Initial State Tab [<img src="images/initial_state_tab.png"
+                    style="border: 0; display:inline; margin: 0 2px; box-shadow: none;" alt="initial_state_tab">].
                 <br />
+                The Initial State is the state of execution our program will begin in.
                 <br />
-
-                <p>
-                    We know which rooms we want to be adjacent to each other, so now we only need to add them into the
-                    program.
-                    <br />
-                    <br />
-                </p>
-            </details>
-
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 6
-                </summary>
-
-                <p>
-                    <img src="images/step9.png" alt="step9" align="center"
-                        style="float: left; padding:20px; max-width: 100%; display:block;" />
-                    <br />
-                    <br />
-                    We'll start by adding the adjacent rooms.
-                    <br />
-                    <br />
-                    Since we already have some rules to move into certain places (Locked rooms and the exit) we do not
-                    have to add them here; however we do need
-                    to add the rest of the rooms since the rule that applies to them uses variables (The Move rule).
-                    <br />
-                    <br />
-                    First we'll select the button "Add Atom."
-                    <br />
-                    An atom is just the predicate that we will be using for the Initial State.
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    For this whole step we will be using the "Adjacent" predicate.
-                    <br />
-                    <br />
-                    Next we will insert the arguments:
+                In this example we only have to think of it in two ways:
+                <ol>
                     <ul>
-                        <em>
-                            - Adjacent: Hallway (Rooms) Home library (Rooms).
-                        </em>
+                        The building of our map, which will most likely stay stagnant.
                         <br />
-                        <br />
-                        <strong>Note:</strong>
-                        <br />
-                        <br />
-                        This only means that Thomas will be able to go into the Home library, but not from the Home
-                        library to the Hallway. To allow them to go back and forward we need to do this rule again, just
-                        switching the arguments.
-                        <br />
-                        <br />
-                        <br />
+                        In this case, the rooms (including the locked ones) will not change at all throughout all
+                        the "playthrough."
                     </ul>
-                    To save time we should also use the button "Duplicate Atom" [<img src="images/duplicate_atom.png"
-                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="duplicate_atom">];
-                    which, as the
-                    name suggests, will make a copy of the atom.
-                    <br />
-                    This way we only have to switch the arguments without having to select the predicate again.
-                </p>
-                <!-- Step 8 and 9 are inverse because I created the doc "step8" before "step9" but it turns out that those steps fits better the otherway around :/ -->
-                <div>
-                    <img src="images/step8.png" alt="step8" align="center"
-                        style="float: right; max-width: 100%; display:block;" />
-                </div>
 
-                <p align="right" style="text-align: right;">
-                    We will essentially be repeating this process until the rooms we want to be adjacent are all filled
-                    in.
                     <br />
                     <br />
-                    At the end we should have:
-                    <ol align="right">
-                        <em>
-                            <ul>
-                                - Adjacent: Hallway (Rooms) Home library (Rooms).
-                            </ul>
+                    <br />
 
-                            <ul>
-                                - Adjacent: Home library (Rooms) Hallway (Rooms).
-                            </ul>
+                    <ul>
+                        The first position of our elements. These will change in the playthroughs, but when we
+                        start the "game" again these elements will go back to the position we put them in.
+                        <br />
+                        In this case, the items and Thomas will all start in specific positions, however they will
+                        be moved or mutated in the game.
+                        <br />
+                        Once we start the game again Thomas and the items will go back to their first positions.
+                    </ul>
+                </ol>
+            </p>
+            <p>
+                With that in mind we will start by making the map.
+                <br />
+                <br />
+                Bringing back the concept we saw in Step 1 and the predicate "Adjacent" we saw in Step 3:
+                <br />
+            </p>
 
-                            <ul>
-                                - Adjacent: Home library (Rooms) Master bedroom (Rooms).
-                            </ul>
+            <div style="text-align:center;">
+                <img src="images/concept.png" alt="concept" style="max-width: 100%;" align="center" />
+                <img src="images/step3.png" alt="step3" style="max-width: 100%;" align="center" />
+            </div>
 
-                            <ul>
-                                - Adjacent: Master bedroom (Rooms) Home library (Rooms).
-                            </ul>
+            </div>
 
-                            <ul>
-                                - Adjacent: Master bedroom (Rooms) Main room (Rooms).
-                            </ul>
+            <br />
+            <br />
 
-                            <ul>
-                                - Adjacent: Main room (Rooms) Master bedroom (Rooms).
-                            </ul>
-                        </em>
-                    </ol>
-                </p>
+            <p>
+                We know which rooms we want to be adjacent to each other, so now we only need to add them into the
+                program.
+                <br />
+                <br />
+            </p>
+        </details>
+
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 6
+            </summary>
+
+            <p>
+                <img src="images/step9.png" alt="step9" align="center"
+                    style="float: left; padding:20px; max-width: 100%; display:block;" />
+                <br />
+                <br />
+                We'll start by adding the adjacent rooms.
+                <br />
+                <br />
+                Since we already have some rules to move into certain places (Locked rooms and the exit) we do not
+                have to add them here; however we do need
+                to add the rest of the rooms since the rule that applies to them uses variables (The Move rule).
+                <br />
+                <br />
+                First we'll select the button "Add Atom."
+                <br />
+                An atom is just the predicate that we will be using for the Initial State.
                 <br />
                 <br />
                 <br />
                 <br />
-            </details>
-
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 7
-                </summary>
-
-                <p>
-                    Similarly to the last step we will be putting all the elements in their place, however we know that
-                    we will be able to change their original states (In this case just change their position).
-                    <br />
-                    <br />
-                    Thankfully we will not have to add anything new to this and can just add the atoms the same way we
-                    had in the previous step.
-                    <br />
-                    <br />
-                </p>
-                <div>
-                    <img src="images/step10.png" alt="step10" align="center"
-                        style="float: left; padding:20px; max-width: 100%; display:block;" />
-                </div>
+                For this whole step we will be using the "Adjacent" predicate.
                 <br />
                 <br />
-                <p>
-                    At the end we should have:
-
-                    <ol>
-                        <em>
-                            <ul>
-                                - At: Golden key (Element) Master bedroom (Rooms).
-                            </ul>
-
-                            <ul>
-                                - Locked: Thomas (Element) Dungeon (Rooms).
-                            </ul>
-
-                            <ul>
-                                - Locked: Metal Key (Element) Dungeon (Rooms).
-                            </ul>
-
-                            <ul>
-                                - Locked: keypad code (Element) Secret room (Rooms).
-                            </ul>
-                        </em>
-                    </ol>
+                Next we will insert the arguments:
+                <ul>
+                    <em>
+                        - Adjacent: Hallway (Rooms) Home library (Rooms).
+                    </em>
+                    <br />
+                    <br />
+                    <strong>Note:</strong>
+                    <br />
+                    <br />
+                    This only means that Thomas will be able to go into the Home library, but not from the Home
+                    library to the Hallway. To allow them to go back and forward we need to do this rule again, just
+                    switching the arguments.
                     <br />
                     <br />
                     <br />
-                    <br />
+                </ul>
+                To save time we should also use the button "Duplicate Atom" [<img src="images/duplicate_atom.png"
+                    style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="duplicate_atom">];
+                which, as the
+                name suggests, will make a copy of the atom.
+                <br />
+                This way we only have to switch the arguments without having to select the predicate again.
+            </p>
+            <!-- Step 8 and 9 are inverse because I created the doc "step8" before "step9" but it turns out that those steps fits better the otherway around :/ -->
+            <div>
+                <img src="images/step8.png" alt="step8" align="center"
+                    style="float: right; max-width: 100%; display:block;" />
+            </div>
 
-                </p>
+            <p align="right" style="text-align: right;">
+                We will essentially be repeating this process until the rooms we want to be adjacent are all filled
+                in.
+                <br />
+                <br />
+                At the end we should have:
+                <ol align="right">
+                    <em>
+                        <ul>
+                            - Adjacent: Hallway (Rooms) Home library (Rooms).
+                        </ul>
 
-            </details>
-        </span>
+                        <ul>
+                            - Adjacent: Home library (Rooms) Hallway (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Home library (Rooms) Master bedroom (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Master bedroom (Rooms) Home library (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Master bedroom (Rooms) Main room (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Adjacent: Main room (Rooms) Master bedroom (Rooms).
+                        </ul>
+                    </em>
+                </ol>
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+        </details>
+
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 7
+            </summary>
+
+            <p>
+                Similarly to the last step we will be putting all the elements in their place, however we know that
+                we will be able to change their original states (In this case just change their position).
+                <br />
+                <br />
+                Thankfully we will not have to add anything new to this and can just add the atoms the same way we
+                had in the previous step.
+                <br />
+                <br />
+            </p>
+            <div>
+                <img src="images/step10.png" alt="step10" align="center"
+                    style="float: left; padding:20px; max-width: 100%; display:block;" />
+            </div>
+            <br />
+            <br />
+            <p>
+                At the end we should have:
+
+                <ol>
+                    <em>
+                        <ul>
+                            - At: Golden key (Element) Master bedroom (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: Thomas (Element) Dungeon (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: Metal Key (Element) Dungeon (Rooms).
+                        </ul>
+
+                        <ul>
+                            - Locked: keypad code (Element) Secret room (Rooms).
+                        </ul>
+                    </em>
+                </ol>
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </p>
+
+        </details>
 
     </details>
 
@@ -976,212 +973,210 @@ Beside each image (the "alt" it says the name of the image file-->
         <summary style="font-size:30px; font-family:Impact; color: #c307ab;">
             Execution Tab
         </summary>
-        <span style="font-family:Bookman Old Style">
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 8
-                </summary>
-                <div>
-                    <img src="images/Step11.png" alt="step11" align="center"
-                        style="float: left; padding:20px; max-width: 100%; display:block;" />
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 8
+            </summary>
+            <div>
+                <img src="images/Step11.png" alt="step11" align="center"
+                    style="float: left; padding:20px; max-width: 100%; display:block;" />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
-                <p>
-                    Now we can finally start our prototype and see if it works.
+            <p>
+                Now we can finally start our prototype and see if it works.
+                <br />
+                The first thing we need to do is click on "Start Execution", because otherwise the executable rules
+                won't appear in the box in the Execution tab.
+                <br />
+                <br />
+                Once we start the execution, we will also be able to see the atoms that we coded before in the
+                States box.
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+        </details>
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 9
+            </summary>
+
+            <div>
+                <img src="images/Step12.png" alt="step12" align="center"
+                    style="float: left; padding:20px; max-width: 100%; display:block;" />
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <p>
+                After we select a rule we have to click the button "Execution" in order to fire it.
+                <br />
+                <br />
+                Once we fire it the next information will appear in the States window:
+                <br />
+                <br />
+                <em>
+                    - The rule that was executed.
                     <br />
-                    The first thing we need to do is click on "Start Execution", because otherwise the executable rules
-                    won't appear in the box in the Execution tab.
+                    - The conditions that were in place, which allowed the rule to be fired.
                     <br />
+                    - The new effects or the arguments that will appear in the new state.
                     <br />
-                    Once we start the execution, we will also be able to see the atoms that we coded before in the
-                    States box.
-                </p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                    - And, finally, the new state.
+                </em>
+            </p>
 
+            <div>
+                <img src="images/step13.png" alt="step13" align="center"
+                    style="float: right; padding:20px; max-width: 100%; display:block;" />
+            </div>
 
-            </details>
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 9
-                </summary>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
-                <div>
-                    <img src="images/Step12.png" alt="step12" align="center"
-                        style="float: left; padding:20px; max-width: 100%; display:block;" />
-                </div>
-
+            <p align="right" style="text-align: right;">
+                Now, while we are testing the prototype you should know about Quiescence.
                 <br />
+                Quiescence means that there are no more rules executable, which could mean 1 of 3 things:
                 <br />
-                <br />
-                <br />
-
-                <p>
-                    After we select a rule we have to click the button "Execution" in order to fire it.
-                    <br />
-                    <br />
-                    Once we fire it the next information will appear in the States window:
-                    <br />
-                    <br />
-                    <em>
-                        - The rule that was executed.
-                        <br />
-                        - The conditions that were in place, which allowed the rule to be fired.
-                        <br />
-                        - The new effects or the arguments that will appear in the new state.
-                        <br />
-                        - And, finally, the new state.
-                    </em>
-                </p>
-
-                <div>
-                    <img src="images/step13.png" alt="step13" align="center"
-                        style="float: right; padding:20px; max-width: 100%; display:block;" />
-                </div>
-
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-
-                <p align="right" style="text-align: right;">
-                    Now, while we are testing the prototype you should know about Quiescence.
-                    <br />
-                    Quiescence means that there are no more rules executable, which could mean 1 of 3 things:
-                    <br />
-                    <ol align="right">
-                        <em>
-                            <ul>
-                                - We have finished the game successfully (We have won).
-                            </ul>
-
-                            <ul>
-                                - We have finished the game unsuccessfully (We have lost).
-                            </ul>
-
-                            <ul>
-                                - We have found a bug.
-                                <br />
-                                A state in which we are stuck and can't take anymore actions, however we also haven't
-                                finished the game.
-                            </ul>
-                        </em>
-                    </ol>
-                    The first two states are usually fine and we want the character to be able to reach it; however the
-                    third option is one we definitely want to avoid. With that in mind, it is important that we test the
-                    prototype to be able to <em>find</em> this bugs so we can fix them.
-                </p>
-
-                <p>
-                    Execute to Quiescence is a useful tool because it picks random action paths until it reaches, as the
-                    name says, Quiescence. Since it is random and not logical, the tools allows us to find any
-                    Quiescence
-                    states that we don't want there to be or else it will give us the end states that we are looking
-                    for.
-                </p>
-
-                <br />
-
-                <div>
-                    <img src="images/step14.png" alt="step14" align="center"
-                        style="float: left; padding:10px; max-width: 100%; display:block;" />
-                </div>
-
-                <p>
-
-                    On the other hand, we don't always <em>need</em> Quiescence. Some games could go on infinitely, like
-                    simulation games that we can repeat tasks and don't really have an end goal.
-                    <br />
-                    In these cases we don't want there to be any Quiescence. However the button is not as useful
-                    because, at the moment of this walkthrough, the website crashes if we click Execute to Quiescence
-                    in a game we don't want one there to be.
-                    <br />
-                    To navigate through this we could make a false state that would create Quiescence and get rid of it
-                    when finishing the prototype or we can just avoid using this button.
-                    <br />
-                    <br />
-                    <br />
-                    Lastly, we can just set an specific amount of Executions we want there to be and, just like the
-                    Execute to Quiescence, it will randomly follow a path, except it will just stop when it reaches the
-                    selected amount.
-                    <br />
-                    This could also be used to avoid the issue of finding Quiescence in a game that should have none
-                    from before, as we can just select a high amount of actions we want and if it doesn't reach
-                    Quiescence the likelyhoods of there being any decrease dramatically.
-                </p>
-
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-
-
-            </details>
-
-            <details>
-                <summary style="font-size:20px; color: orange;">
-                    Step 10
-                </summary>
-
-                <div>
-                    <img src="images/step15.png" alt="step15" align="center"
-                        style="float: left; padding:10px; max-width: 100%; display:block;" />
-                </div>
-
-                <br />
-
-                <p>
-                    Lastly, we have the Filter; which allows us to keep track of certain states without have to search
-                    for them in every new state.
-                    <br />
-                    To set up a filter we just click on "Add filter group" [<img src="images/filter_group.png"
-                        style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="Add filter group">] and
-                    the menu from the image will appear.
-                    <br />
-                    Just like the Atoms, filters are just predicates. However, filters also allow us to add variables.
-                    <br />
-                    As an example, we can try to keep track of all the unlocked rooms Thomas passes through, so we add
-                    the filter:
+                <ol align="right">
                     <em>
                         <ul>
-                            - At: Thomas (Element) L (Rooms).
+                            - We have finished the game successfully (We have won).
+                        </ul>
+
+                        <ul>
+                            - We have finished the game unsuccessfully (We have lost).
+                        </ul>
+
+                        <ul>
+                            - We have found a bug.
+                            <br />
+                            A state in which we are stuck and can't take anymore actions, however we also haven't
+                            finished the game.
                         </ul>
                     </em>
-                    <br />
-                    We don't have to put them in every prototype we make, but it's a useful tool if we want to
-                    keep track of a specific state or to make the new state easier to understand.
-                </p>
+                </ol>
+                The first two states are usually fine and we want the character to be able to reach it; however the
+                third option is one we definitely want to avoid. With that in mind, it is important that we test the
+                prototype to be able to <em>find</em> this bugs so we can fix them.
+            </p>
 
+            <p>
+                Execute to Quiescence is a useful tool because it picks random action paths until it reaches, as the
+                name says, Quiescence. Since it is random and not logical, the tools allows us to find any
+                Quiescence
+                states that we don't want there to be or else it will give us the end states that we are looking
+                for.
+            </p>
+
+            <br />
+
+            <div>
+                <img src="images/step14.png" alt="step14" align="center"
+                    style="float: left; padding:10px; max-width: 100%; display:block;" />
+            </div>
+
+            <p>
+
+                On the other hand, we don't always <em>need</em> Quiescence. Some games could go on infinitely, like
+                simulation games that we can repeat tasks and don't really have an end goal.
+                <br />
+                In these cases we don't want there to be any Quiescence. However the button is not as useful
+                because, at the moment of this walkthrough, the website crashes if we click Execute to Quiescence
+                in a game we don't want one there to be.
+                <br />
+                To navigate through this we could make a false state that would create Quiescence and get rid of it
+                when finishing the prototype or we can just avoid using this button.
                 <br />
                 <br />
                 <br />
+                Lastly, we can just set an specific amount of Executions we want there to be and, just like the
+                Execute to Quiescence, it will randomly follow a path, except it will just stop when it reaches the
+                selected amount.
                 <br />
-                <br />
-                <br />
+                This could also be used to avoid the issue of finding Quiescence in a game that should have none
+                from before, as we can just select a high amount of actions we want and if it doesn't reach
+                Quiescence the likelyhoods of there being any decrease dramatically.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
 
-            </details>
+        </details>
 
-        </span>
+        <details>
+            <summary style="font-size:20px; color: orange;">
+                Step 10
+            </summary>
+
+            <div>
+                <img src="images/step15.png" alt="step15" align="center"
+                    style="float: left; padding:10px; max-width: 100%; display:block;" />
+            </div>
+
+            <br />
+
+            <p>
+                Lastly, we have the Filter; which allows us to keep track of certain states without have to search
+                for them in every new state.
+                <br />
+                To set up a filter we just click on "Add filter group" [<img src="images/filter_group.png"
+                    style="border: 0; display:inline; margin: 0 2px; box-shadow: none" alt="Add filter group">] and
+                the menu from the image will appear.
+                <br />
+                Just like the Atoms, filters are just predicates. However, filters also allow us to add variables.
+                <br />
+                As an example, we can try to keep track of all the unlocked rooms Thomas passes through, so we add
+                the filter:
+                <em>
+                    <ul>
+                        - At: Thomas (Element) L (Rooms).
+                    </ul>
+                </em>
+                <br />
+                We don't have to put them in every prototype we make, but it's a useful tool if we want to
+                keep track of a specific state or to make the new state easier to understand.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+        </details>
+
 
     </details>
 
@@ -1189,29 +1184,27 @@ Beside each image (the "alt" it says the name of the image file-->
         <summary style="font-size:30px; font-family:Impact; color: #c307ab;">
             Examples Tab
         </summary>
-        <span style="font-family:Bookman Old Style">
-            <div>
-                <img src="images/step16.png" alt="step16" align="center"
-                    style="float: left; padding:10px; max-width: 100%; display:block;" />
-            </div>
+        <div>
+            <img src="images/step16.png" alt="step16" align="center"
+                style="float: left; padding:10px; max-width: 100%; display:block;" />
+        </div>
 
-            <p>
-                <br />
-                <br />
-                <br />
-                <br />
+        <p>
+            <br />
+            <br />
+            <br />
+            <br />
 
-                If we'd like to see some other examples we can also go to the Examples Tab [<img
-                    src="images/examples_tab.png" style="border: 0; display:inline; margin: 0 2px; box-shadow: none"
-                    alt="examples_tab">].
-                <br />
-                In this tab we can see a list of different examples we can download into our computers and load them
-                into the Ceptre Program.
-                <br />
-                We could also play around with our downloaded copies to see how new mechanics work.
-            </p>
+            If we'd like to see some other examples we can also go to the Examples Tab [<img
+                src="images/examples_tab.png" style="border: 0; display:inline; margin: 0 2px; box-shadow: none"
+                alt="examples_tab">].
+            <br />
+            In this tab we can see a list of different examples we can download into our computers and load them
+            into the Ceptre Program.
+            <br />
+            We could also play around with our downloaded copies to see how new mechanics work.
+        </p>
 
-        </span>
     </details>
 
     <!--
@@ -1221,7 +1214,6 @@ Beside each image (the "alt" it says the name of the image file-->
         <summary  style="font-size:30px; font-family:Impact; color: #c307ab;">
             Execution Tab
         </summary>
-        <span style="font-family:Bookman Old Style">
             <details>
                 <summary style="font-size:20px; color: orange;">
                     Step 
@@ -1232,8 +1224,6 @@ Beside each image (the "alt" it says the name of the image file-->
                 </p>
             
             </details>
-
-        </span>
     </details>
  -->
 
