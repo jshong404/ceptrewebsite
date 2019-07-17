@@ -60,6 +60,12 @@ div {
 div-a{
   text-align: right;
 }
+
+header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
  
 #navbar {
   overflow: hidden;
@@ -88,7 +94,7 @@ div-a{
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 90%;
 }
 
 .sticky + .content {
@@ -101,12 +107,6 @@ footer {
   border-top: 1px solid lightgrey;
   text-align: right;
   color: teal;
-}
-  
-header {
-  background-color: #F1F1F1;
-  text-align: center;
-  padding: 20px;
 }
 
 .slider {
