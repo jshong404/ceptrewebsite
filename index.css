@@ -76,6 +76,11 @@ div-a{
   text-decoration: none;
 }
 
+#navbar a:hover {
+  background-color: #E1E1E1;
+  color: black;
+}
+
 .content {
   padding: 16px;
 }
