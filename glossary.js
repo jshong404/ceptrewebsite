@@ -1,5 +1,5 @@
-
-window.onscroll = function() {myFunction()};
+/*This is the sticky nav bar */
+window.onscroll = function () { myFunction() };
 
 var navbar = document.getElementById("navbar");
 
@@ -11,4 +11,10 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+/*This is the search bar */
+function checkInput() {
+  var query = document.getElementById('find').value;
+  window.find(query);
+  return true;
 }
