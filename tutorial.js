@@ -1,4 +1,5 @@
 
+/*This is the sticky nav bar */
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
