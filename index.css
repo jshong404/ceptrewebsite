@@ -16,7 +16,7 @@ body {
   background-color:#ffffff;
 }
 
- /* This one could still e used to make a character limit so the website doesn't look weird in bigger screens, but the reason why I didn't put that
+ /* This one could still be used to make a character limit so the website doesn't look weird in bigger screens, but the reason why I didn't put that
 is because then it makes it weird for smaller screens; like when the user restores down the tab or if the uses the website on the phone */
  
 p {
@@ -29,10 +29,6 @@ h1 {
   color: #006400;
   text-align: center;
   vertical-align: center;
-}
-  
-bold {
-  font-weight: bold;
 }
   
 h2 {
