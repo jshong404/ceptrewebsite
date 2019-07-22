@@ -36,13 +36,6 @@ h2 {
 }
   
 /*This one has a line-divider */
-h3{
-  color:#000000;
-  text-align: right;
-  border-top: 1px solid lightgrey;
-}
-  
-/*This one has a line-divider */
 h4{
   border-top: 1px solid lightgrey;
   text-align:right;
