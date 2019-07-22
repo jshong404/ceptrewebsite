@@ -4,8 +4,13 @@
   font-family: Quicksand;
 }
 
+@font-face {
+  src: url(font/PermanentMarker-Regular.ttf);
+  font-family: PMR;
+}
+
 body {
-  font-family: 'Quicksand', 'Bookman Old Style', "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: 'Quicksand', 'Bookman Old Style',"PMR", "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 5em;
   text-align: block;
   max-width: 100%; 
@@ -15,11 +20,6 @@ body {
 
 p {
   font-size: 15px;
-}
-
-/* The next two are for the subtitles in the tutorial page */
-h2{
-  color: orange !important;
 }
   
 a {
