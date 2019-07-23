@@ -1,109 +1,122 @@
 ﻿[
   [
     {
-      "id": "baby",
+      "id": "babies",
       "elements": [
         "baby_rabbit",
         "baby_fox"
       ]
     },
     {
-      "id": "adult",
+      "id": "adults",
       "elements": [
         "rabbit",
         "fox"
       ]
     },
     {
-      "id": "actions",
+      "id": "old",
       "elements": [
-        "grow"
+        "old_rabbit",
+        "old_fox"
       ]
     },
     {
       "id": "new_state",
       "elements": [
         "dead_rabbit",
-        "full_fox",
-        "live_rabbit",
-        "hungry_fox"
+        "full_fox"
       ]
     }
   ],
   [
     {
-      "id": "p1",
+      "id": "p0",
       "name": "birth_of",
       "argumentIndex": 1,
       "arguments": [
         {
+          "id": "p0.0",
+          "value": "babies"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "grown",
+      "argumentIndex": 1,
+      "arguments": [
+        {
           "id": "p1.0",
-          "value": "baby"
+          "value": "adults"
         }
       ]
     },
     {
       "id": "p2",
-      "name": "grown",
+      "name": "there's_a",
       "argumentIndex": 1,
       "arguments": [
         {
           "id": "p2.0",
-          "value": "adult"
+          "value": "new_state"
         }
       ]
     },
     {
       "id": "p3",
-      "name": "there's_a",
-      "argumentIndex": 2,
+      "name": "lastly",
+      "argumentIndex": 1,
       "arguments": [
         {
           "id": "p3.0",
-          "value": "new_state"
-        },
-        {
-          "id": "p3.1",
-          "value": "new_state"
+          "value": "old"
         }
       ]
     }
   ],
   [
     {
-      "id": "p1",
+      "id": "p0",
       "name": "birth_of",
       "argumentIndex": 1,
       "arguments": [
         {
+          "id": "p0.0",
+          "value": "babies"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "grown",
+      "argumentIndex": 1,
+      "arguments": [
+        {
           "id": "p1.0",
-          "value": "baby"
+          "value": "adults"
         }
       ]
     },
     {
       "id": "p2",
-      "name": "grown",
+      "name": "there's_a",
       "argumentIndex": 1,
       "arguments": [
         {
           "id": "p2.0",
-          "value": "adult"
+          "value": "new_state"
         }
       ]
     },
     {
       "id": "p3",
-      "name": "there's_a",
-      "argumentIndex": 2,
+      "name": "lastly",
+      "argumentIndex": 1,
       "arguments": [
         {
           "id": "p3.0",
-          "value": "new_state"
-        },
-        {
-          "id": "p3.1",
-          "value": "new_state"
+          "value": "old"
         }
       ]
     }
@@ -114,7 +127,7 @@
       "id": "r1container",
       "name": "grow_prey",
       "conditionIndex": 1,
-      "addIndex": 6,
+      "addIndex": 2,
       "predicateSet": [
         {
           "id": "c.1.0",
@@ -123,20 +136,20 @@
             {
               "id": "c.1.0.0",
               "arg": "baby_rabbit",
-              "type": "baby",
+              "type": "babies",
               "variable": false
             }
           ],
           "removeFlag": true
         },
         {
-          "id": "a.1.2",
+          "id": "a.1.0",
           "name": "grown",
           "arguments": [
             {
-              "id": "a.1.2.0",
+              "id": "a.1.0.0",
               "arg": "rabbit",
-              "type": "adult",
+              "type": "adults",
               "variable": false
             }
           ],
@@ -145,15 +158,17 @@
       ],
       "sets": [
         {
-          "id": "baby",
+          "id": "babies",
+          "elements": [
+            "B"
+          ]
+        },
+        {
+          "id": "adults",
           "elements": []
         },
         {
-          "id": "adult",
-          "elements": []
-        },
-        {
-          "id": "actions",
+          "id": "old",
           "elements": []
         },
         {
@@ -167,7 +182,7 @@
       "id": "r2container",
       "name": "grow_predator",
       "conditionIndex": 1,
-      "addIndex": 4,
+      "addIndex": 2,
       "predicateSet": [
         {
           "id": "c.2.0",
@@ -176,7 +191,7 @@
             {
               "id": "c.2.0.0",
               "arg": "baby_fox",
-              "type": "baby",
+              "type": "babies",
               "variable": false
             }
           ],
@@ -189,7 +204,7 @@
             {
               "id": "a.2.0.0",
               "arg": "fox",
-              "type": "adult",
+              "type": "adults",
               "variable": false
             }
           ],
@@ -198,15 +213,15 @@
       ],
       "sets": [
         {
-          "id": "baby",
+          "id": "babies",
           "elements": []
         },
         {
-          "id": "adult",
+          "id": "adults",
           "elements": []
         },
         {
-          "id": "actions",
+          "id": "old",
           "elements": []
         },
         {
@@ -218,9 +233,9 @@
     {
       "index": 3,
       "id": "r3container",
-      "name": "successful_hunt",
+      "name": "mate_rabbits",
       "conditionIndex": 2,
-      "addIndex": 4,
+      "addIndex": 10,
       "predicateSet": [
         {
           "id": "c.3.0",
@@ -229,7 +244,7 @@
             {
               "id": "c.3.0.0",
               "arg": "rabbit",
-              "type": "adult",
+              "type": "adults",
               "variable": false
             }
           ],
@@ -241,27 +256,73 @@
           "arguments": [
             {
               "id": "c.3.1.0",
-              "arg": "fox",
-              "type": "adult",
+              "arg": "rabbit",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.3.0",
+          "name": "birth_of",
+          "arguments": [
+            {
+              "id": "a.3.0.0",
+              "arg": "baby_rabbit",
+              "type": "babies",
               "variable": false
             }
           ],
           "removeFlag": false
         },
         {
-          "id": "a.3.0",
-          "name": "there's_a",
+          "id": "a.3.2",
+          "name": "birth_of",
           "arguments": [
             {
-              "id": "a.3.0.0",
-              "arg": "dead_rabbit",
-              "type": "new_state",
+              "id": "a.3.2.0",
+              "arg": "baby_rabbit",
+              "type": "babies",
               "variable": false
-            },
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.3.4",
+          "name": "lastly",
+          "arguments": [
             {
-              "id": "a.3.0.1",
-              "arg": "full_fox",
-              "type": "new_state",
+              "id": "a.3.4.0",
+              "arg": "old_rabbit",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.3.6",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.3.6.0",
+              "arg": "old_rabbit",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.3.8",
+          "name": "birth_of",
+          "arguments": [
+            {
+              "id": "a.3.8.0",
+              "arg": "baby_rabbit",
+              "type": "babies",
               "variable": false
             }
           ],
@@ -270,15 +331,15 @@
       ],
       "sets": [
         {
-          "id": "baby",
+          "id": "babies",
           "elements": []
         },
         {
-          "id": "adult",
+          "id": "adults",
           "elements": []
         },
         {
-          "id": "actions",
+          "id": "old",
           "elements": []
         },
         {
@@ -290,9 +351,9 @@
     {
       "index": 4,
       "id": "r4container",
-      "name": "successful_escape",
+      "name": "mate_foxes",
       "conditionIndex": 2,
-      "addIndex": 4,
+      "addIndex": 6,
       "predicateSet": [
         {
           "id": "c.4.0",
@@ -300,12 +361,12 @@
           "arguments": [
             {
               "id": "c.4.0.0",
-              "arg": "rabbit",
-              "type": "adult",
+              "arg": "fox",
+              "type": "adults",
               "variable": false
             }
           ],
-          "removeFlag": false
+          "removeFlag": true
         },
         {
           "id": "c.4.1",
@@ -314,7 +375,46 @@
             {
               "id": "c.4.1.0",
               "arg": "fox",
-              "type": "adult",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.4.0",
+          "name": "birth_of",
+          "arguments": [
+            {
+              "id": "a.4.0.0",
+              "arg": "baby_fox",
+              "type": "babies",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.4.2",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.4.2.0",
+              "arg": "old_fox",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.4.4",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.4.4.0",
+              "arg": "old_fox",
+              "type": "old",
               "variable": false
             }
           ],
@@ -323,15 +423,373 @@
       ],
       "sets": [
         {
-          "id": "baby",
+          "id": "babies",
           "elements": []
         },
         {
-          "id": "adult",
+          "id": "adults",
           "elements": []
         },
         {
-          "id": "actions",
+          "id": "old",
+          "elements": []
+        },
+        {
+          "id": "new_state",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "id": "r5container",
+      "name": "successful_hunt",
+      "conditionIndex": 2,
+      "addIndex": 4,
+      "predicateSet": [
+        {
+          "id": "c.5.0",
+          "name": "grown",
+          "arguments": [
+            {
+              "id": "c.5.0.0",
+              "arg": "rabbit",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.5.1",
+          "name": "grown",
+          "arguments": [
+            {
+              "id": "c.5.1.0",
+              "arg": "fox",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.5.0",
+          "name": "there's_a",
+          "arguments": [
+            {
+              "id": "a.5.0.0",
+              "arg": "full_fox",
+              "type": "new_state",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.5.2",
+          "name": "there's_a",
+          "arguments": [
+            {
+              "id": "a.5.2.0",
+              "arg": "dead_rabbit",
+              "type": "new_state",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "babies",
+          "elements": []
+        },
+        {
+          "id": "adults",
+          "elements": []
+        },
+        {
+          "id": "old",
+          "elements": []
+        },
+        {
+          "id": "new_state",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "r6container",
+      "name": "successful_escape",
+      "conditionIndex": 2,
+      "addIndex": 0,
+      "predicateSet": [
+        {
+          "id": "c.6.0",
+          "name": "grown",
+          "arguments": [
+            {
+              "id": "c.6.0.0",
+              "arg": "rabbit",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.6.1",
+          "name": "grown",
+          "arguments": [
+            {
+              "id": "c.6.1.0",
+              "arg": "fox",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "babies",
+          "elements": []
+        },
+        {
+          "id": "adults",
+          "elements": []
+        },
+        {
+          "id": "old",
+          "elements": []
+        },
+        {
+          "id": "new_state",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "r7container",
+      "name": "death",
+      "conditionIndex": 1,
+      "addIndex": 0,
+      "predicateSet": [
+        {
+          "id": "c.7.0",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "c.7.0.0",
+              "arg": "O",
+              "type": "old",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        }
+      ],
+      "sets": [
+        {
+          "id": "babies",
+          "elements": []
+        },
+        {
+          "id": "adults",
+          "elements": []
+        },
+        {
+          "id": "old",
+          "elements": [
+            "O"
+          ]
+        },
+        {
+          "id": "new_state",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": "r8container",
+      "name": "mate_foxes_2",
+      "conditionIndex": 2,
+      "addIndex": 6,
+      "predicateSet": [
+        {
+          "id": "c.8.0",
+          "name": "there's_a",
+          "arguments": [
+            {
+              "id": "c.8.0.0",
+              "arg": "full_fox",
+              "type": "new_state",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.8.1",
+          "name": "there's_a",
+          "arguments": [
+            {
+              "id": "c.8.1.0",
+              "arg": "full_fox",
+              "type": "new_state",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.8.0",
+          "name": "birth_of",
+          "arguments": [
+            {
+              "id": "a.8.0.0",
+              "arg": "baby_fox",
+              "type": "babies",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.8.2",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.8.2.0",
+              "arg": "old_fox",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.8.4",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.8.4.0",
+              "arg": "old_fox",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "babies",
+          "elements": []
+        },
+        {
+          "id": "adults",
+          "elements": []
+        },
+        {
+          "id": "old",
+          "elements": []
+        },
+        {
+          "id": "new_state",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": "r9container",
+      "name": "mate_foxes_3",
+      "conditionIndex": 2,
+      "addIndex": 6,
+      "predicateSet": [
+        {
+          "id": "c.9.0",
+          "name": "grown",
+          "arguments": [
+            {
+              "id": "c.9.0.0",
+              "arg": "fox",
+              "type": "adults",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.9.1",
+          "name": "there's_a",
+          "arguments": [
+            {
+              "id": "c.9.1.0",
+              "arg": "full_fox",
+              "type": "new_state",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.9.0",
+          "name": "birth_of",
+          "arguments": [
+            {
+              "id": "a.9.0.0",
+              "arg": "baby_fox",
+              "type": "babies",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.9.2",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.9.2.0",
+              "arg": "old_fox",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.9.4",
+          "name": "lastly",
+          "arguments": [
+            {
+              "id": "a.9.4.0",
+              "arg": "old_fox",
+              "type": "old",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "babies",
+          "elements": []
+        },
+        {
+          "id": "adults",
+          "elements": []
+        },
+        {
+          "id": "old",
           "elements": []
         },
         {
@@ -350,7 +808,7 @@
         {
           "id": "i0.0",
           "arg": "baby_rabbit",
-          "type": "baby",
+          "type": "babies",
           "variable": false,
           "value": "baby_rabbit"
         }
@@ -359,19 +817,57 @@
     {
       "id": "i1",
       "name": "birth_of",
-      "argumentIndex": 0,
       "arguments": [
         {
           "id": "i1.0",
+          "arg": "baby_rabbit",
+          "type": "babies",
+          "variable": false,
+          "value": "baby_rabbit"
+        }
+      ]
+    },
+    {
+      "id": "i3",
+      "name": "birth_of",
+      "arguments": [
+        {
+          "id": "i3.0",
           "arg": "baby_fox",
-          "type": "baby",
+          "type": "babies",
           "variable": false,
           "value": "baby_fox"
+        }
+      ]
+    },
+    {
+      "id": "i4",
+      "name": "birth_of",
+      "arguments": [
+        {
+          "id": "i4.0",
+          "arg": "baby_fox",
+          "type": "babies",
+          "variable": false,
+          "value": "baby_fox"
+        }
+      ]
+    },
+    {
+      "id": "i7",
+      "name": "birth_of",
+      "arguments": [
+        {
+          "id": "i7.0",
+          "arg": "baby_rabbit",
+          "type": "babies",
+          "variable": false,
+          "value": "baby_rabbit"
         }
       ]
     }
   ],
   4,
-  4,
-  2
+  9,
+  8
 ]
