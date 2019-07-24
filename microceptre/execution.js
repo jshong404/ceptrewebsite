@@ -33,8 +33,8 @@ function transisitionSelected() {
         pastStates.push(nextState)
         printTransition(transition)
         getTransitions(nextState);
-        populateTransitionSelector(possibleTransitions);
         printState(nextState)
+        populateTransitionSelector(possibleTransitions);
         getFilter(nextState, filters)
         updateFilterState(nextState)
     }
@@ -131,8 +131,10 @@ function getTransitions(currentState) {
             let dupPred = { name: pred.name, arguments: []};
             for (let arg of pred.arguments) {
                 dupPred.arguments.push({ arg: arg.arg, type: arg.type, variable: arg.variable });
-                if (!getTransitionArg(arg.arg, transition.arguments))
-                    transition.arguments.push({ id: arg.arg, arg: arg.arg, type: arg.type, fixed: !arg.variable });
+                if (!getTransitionArg(arg.arg, transition.arguments)){
+                    let variable = typeof(arg.variable) == 'boolean' ? !arg.variable : arg.variable;
+                    transition.arguments.push({ id: arg.arg, arg: arg.arg, type: arg.type, fixed: variable});
+                } 
             }
             transition.effects.push(dupPred);
         }
@@ -147,9 +149,21 @@ function lockTransition(transition, currentState) {
     //if no remaining conditions to fix, then the transition is possible
     if (transition.remainingConditions.length == 0) {
         for (let pred of transition.effects) {
+            for (let arg of pred.arguments){
+                let argument = getTransitionArgument(arg.arg, transition.arguments)
+                if (argument.fixed == 'expr'){
+                    let expression = evaluate(argument.arg, transition.arguments)
+                    argument.arg = expression;
+                }
+            }
+        }
+        for (let pred of transition.effects) {
+            if(isNumPred(pred.name))
+                continue;
             let dupPred = { name: pred.name, arguments: [] };
-            for (let arg of pred.arguments)
+            for (let arg of pred.arguments){
                 dupPred.arguments.push(getTransitionArgument(arg.arg, transition.arguments))
+            }
             currentState.push(dupPred)
         }
         possibleTransitions.push({ transition: transition, state: currentState })
@@ -158,26 +172,45 @@ function lockTransition(transition, currentState) {
 
     //otherwise, try to fix an element of the remaining conditions
     let currentCondition = transition.remainingConditions.pop();
-    transition.fixedConditions.push(currentCondition);
-    for (let atom of currentState) {
-        let valid = true;
-        if (atom.name == currentCondition.name) {
-            for (let i = 0; i < atom.arguments.length; i++) {
-                let arg = getTransitionArgument(currentCondition.arguments[i].arg, transition.arguments);
-                valid = valid && ((atom.arguments[i].arg == arg.arg) || !arg.fixed)
-            }
-            if (valid) {
-                let newTransition = duplicateTransition(transition); 
-                let newState = currentState.slice(0);
-                newState.splice(newState.indexOf(atom), 1);
+    if (!isNumPred(currentCondition.name)) {
+        transition.fixedConditions.push(currentCondition);
+        for (let atom of currentState) {
+            let valid = true;
+            if (atom.name == currentCondition.name) {
                 for (let i = 0; i < atom.arguments.length; i++) {
-                    let arg = getTransitionArgument(currentCondition.arguments[i].arg, newTransition.arguments);
-                    arg.arg = atom.arguments[i].arg;
-                    arg.fixed = true;
-                    arg.type = atom.arguments[i].type;
+                    let arg = getTransitionArgument(currentCondition.arguments[i].arg, transition.arguments);
+                    valid = valid && ((atom.arguments[i].arg == arg.arg) || !arg.fixed)
                 }
-                lockTransition(newTransition, newState);
+                if (valid) {
+                    let newTransition = duplicateTransition(transition);
+                    let newState = currentState.slice(0);
+                    newState.splice(newState.indexOf(atom), 1);
+                    for (let i = 0; i < atom.arguments.length; i++) {
+                        let arg = getTransitionArgument(currentCondition.arguments[i].arg, newTransition.arguments);
+                        arg.arg = atom.arguments[i].arg;
+                        arg.fixed = true;
+                        arg.type = atom.arguments[i].type;
+                    }
+                    lockTransition(newTransition, newState);
+                }
             }
+        }
+    } else{
+        let valid = true
+        for (let arg of currentCondition.arguments){
+            valid = valid && getTransitionArgument(arg.arg, transition.arguments).fixed
+        }
+        if(!valid){
+            transition.remainingConditions.unshift(currentCondition)
+            lockTransition(transition, currentState) 
+        } else {
+            let argArray = [];
+            for (let i=0; i<currentCondition.arguments.length; i++) {
+                argArray.push(getTransitionArgument(currentCondition.arguments[i].arg, transition.arguments))
+            }
+            let result = evaluateNumberPred(currentCondition.name, argArray[0].arg, argArray[1].arg)
+            if(result)
+                lockTransition(transition, currentState)   
         }
     }
 }

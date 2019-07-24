@@ -52,6 +52,9 @@ window.onload = function () {
     //addTestData();
 
     createButtonsOnInitialize();
+
+    createNumbers();
+
 }
 var predIndex = 0;
 var ruleIndex = 0;
@@ -62,6 +65,7 @@ var rules = new Set();
 var atoms = new Set();
 var filters = {}
 var filterSets = new Set();
+var fixedPredicates = new Set();
 var predicates = new Set();
 var finalSets = new Set();
 var finalPredicates = new Set();
@@ -574,6 +578,8 @@ function updateAllSetSelectors() {
         setSelector.options.length = 0;
         var index = 0;
         for (var element of finalSets) {
+            if(set == 'setSelector' && element.id == 'numbers')
+                continue;
             var option = document.createElement('option');
             option.value = index++;
             option.innerHTML = element.id;
@@ -606,6 +612,14 @@ function updateAllPredicateSelectors() {
             option.innerHTML = predicate.name;
             predicateSelector.appendChild(option);
         }
+        if (selector.charAt(0)=='c'){
+            for (var predicate of fixedPredicates) {
+                let option = document.createElement('option');
+                option.value = index++;
+                option.innerHTML = predicate.name;
+                predicateSelector.appendChild(option);
+            }
+        }
         for (var element in predicateSelector.options) {
             if (currentSelection == predicateSelector.options[element].text)
                 predicateSelector.selectedIndex = element;
@@ -620,9 +634,15 @@ function updateArgumentSelector(argument, rulePredicate, ruleSets) {
     var selector = document.getElementById(argument.id);
     var argSet = new Set();
     argSet.add('');
-    //determine if the predicate is a condition or an add
-    if (rulePredicate.id.charAt(0) == 'c' || rulePredicate.id.charAt(0) == 'f')
+    //determine if the predicate is a condition or a filter
+    if ((rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) || rulePredicate.id.charAt(0) == 'f')
         argSet.add('new variable');
+    if (!isNumPred(rulePredicate.name) && argument.type=='numbers') {
+        if (!(rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) && rulePredicate.id.charAt(0) != 'f' && rulePredicate.id.charAt(0) != 'i')
+            argSet.add('new expression');
+        argSet.add('new number')
+        argSet.add(argument.arg)
+    }
     let temp = getSetElementByID(argument.type, ruleSets);
     if (!temp)
         temp = new Set();
@@ -1130,7 +1150,7 @@ function addArgumentsForPredicate(selectorID, rulePredicate, ruleSets) {
     var predName = predicateSelector.options[predicateSelector.selectedIndex].text;
     var predicateContainer = predicateSelector.parentElement;
 
-    var predicate = getSetElementByName(predName, finalPredicates);
+    var predicate = getSetElementByName(predName, finalPredicates.union(fixedPredicates));
     var index = 0;
 
     rulePredicate.name = predicate.name;
@@ -1188,10 +1208,31 @@ function selectPredicateArgument(ruleSets, argument) {
             argumentSelector.selectedIndex = 0;
         } else {
             getSetElementByID(argument.type, ruleSets).elements.add(newVar);
-            updateAllArgSelectors();
             argument.arg = newVar;
+            updateAllArgSelectors();
             setSelectorByText(newVar, argumentSelector);
             argument.variable = true;
+        }
+    } else if (currentlySelected == 'new expression') {
+        var newExp = prompt('please enter an expression');
+        if (newExp == null || newExp == '' || !evaluatable(newExp, getSetElementByID(argument.type, ruleSets).elements)) {
+            alert('Invalid Expression. Expression cannot be evaluated.');
+            argumentSelector.selectedIndex = 0;
+        } else {
+            argument.arg = newExp;
+            argument.variable = 'expr';
+            updateAllArgSelectors();
+            setSelectorByText(newExp, argumentSelector);
+        }
+    } else if (currentlySelected == 'new number') {
+        var newNum = prompt('Please enter a whole number');
+        if (newNum == null || newNum == '' || isNaN(newNum)) {
+            alert('Invalid Number. Please enter a whole number.');
+            argumentSelector.selectedIndex = 0;
+        } else {
+            argument.arg = newNum;
+            updateAllArgSelectors();
+            setSelectorByText(newNum, argumentSelector);
         }
     } else {
         argument.arg = currentlySelected;

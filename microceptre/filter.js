@@ -180,7 +180,7 @@ function updateFilterState(currentState){
 function getANDFilter(currentState, filters) {
     let andFilter = { id: "andFilter", name: "filter.name", fixedPredicates: [], remainingPredicates: [], arguments: [] };
     for (let pred of filters) {
-            let dupPred = { name: pred.name, arguments: [] };
+            let dupPred = { name: pred.name, arguments: [], hidden: pred.hidden};
             for (let arg of pred.arguments) {
                 dupPred.arguments.push({ arg: arg.arg, variable: arg.variable });
                 if (!getTransitionArg(arg.arg, andFilter.arguments))
@@ -188,14 +188,14 @@ function getANDFilter(currentState, filters) {
             }
             andFilter.remainingPredicates.push(dupPred);
     }
-    lockFilter(andFilter, currentState);
+    lockFilter(andFilter, currentState, []);
 }
 
 //Tries to lock the filter given the current state
-function lockFilter(filter, currentState) {
+function lockFilter(filter, currentState, hiddenPredicates) {
     //if no remaining conditions to fix, then the transition is possible
     if (filter.remainingPredicates.length == 0) {
-        newStates.push(currentState)
+        newStates.push(currentState.concat(hiddenPredicates))
         return;
     }
 
@@ -219,7 +219,9 @@ function lockFilter(filter, currentState) {
                     arg.fixed = true;
                     arg.type = atom.arguments[i].type;
                 }
-                lockFilter(newFilter, newState);
+                if (currentPredicate.hidden == 'hide')
+                    hiddenPredicates.push(atom)
+                lockFilter(newFilter, newState, hiddenPredicates);
             }
         }
     }
@@ -232,7 +234,7 @@ function duplicateFilter(filter) {
     let newFilter = { id: filter.id, name: filter.name, fixedPredicates: [], remainingPredicates: [], arguments: [] };
     //duplicate remaining conditions
     for (let pred of filter.remainingPredicates) {
-        let dupPred = { name: pred.name, arguments: [] };
+        let dupPred = { name: pred.name, arguments: [], hidden: pred.hidden };
         for (let arg of pred.arguments)
             dupPred.arguments.push({ arg: arg.arg, variable: arg.variable });
         newFilter.remainingPredicates.push(dupPred);
@@ -240,7 +242,7 @@ function duplicateFilter(filter) {
 
     //duplicate fixed conditions
     for (let pred of filter.fixedPredicates) {
-        let dupPred = { name: pred.name, arguments: [] };
+        let dupPred = { name: pred.name, arguments: [], hidden: pred.hidden};
         for (let arg of pred.arguments)
             dupPred.arguments.push({ arg: arg.arg, variable: arg.variable });
         newFilter.fixedPredicates.push(dupPred);
