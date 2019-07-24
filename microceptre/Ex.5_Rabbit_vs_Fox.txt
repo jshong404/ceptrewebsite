@@ -127,7 +127,7 @@
       "id": "r1container",
       "name": "grow_prey",
       "conditionIndex": 1,
-      "addIndex": 2,
+      "addIndex": 4,
       "predicateSet": [
         {
           "id": "c.1.0",
@@ -182,7 +182,7 @@
       "id": "r2container",
       "name": "grow_predator",
       "conditionIndex": 1,
-      "addIndex": 2,
+      "addIndex": 4,
       "predicateSet": [
         {
           "id": "c.2.0",
@@ -235,7 +235,7 @@
       "id": "r3container",
       "name": "mate_rabbits",
       "conditionIndex": 2,
-      "addIndex": 10,
+      "addIndex": 20,
       "predicateSet": [
         {
           "id": "c.3.0",
@@ -314,19 +314,6 @@
             }
           ],
           "removeFlag": false
-        },
-        {
-          "id": "a.3.8",
-          "name": "birth_of",
-          "arguments": [
-            {
-              "id": "a.3.8.0",
-              "arg": "baby_rabbit",
-              "type": "babies",
-              "variable": false
-            }
-          ],
-          "removeFlag": false
         }
       ],
       "sets": [
@@ -353,7 +340,7 @@
       "id": "r4container",
       "name": "mate_foxes",
       "conditionIndex": 2,
-      "addIndex": 6,
+      "addIndex": 12,
       "predicateSet": [
         {
           "id": "c.4.0",
@@ -445,7 +432,7 @@
       "id": "r5container",
       "name": "successful_hunt",
       "conditionIndex": 2,
-      "addIndex": 4,
+      "addIndex": 8,
       "predicateSet": [
         {
           "id": "c.5.0",
@@ -480,19 +467,6 @@
             {
               "id": "a.5.0.0",
               "arg": "full_fox",
-              "type": "new_state",
-              "variable": false
-            }
-          ],
-          "removeFlag": false
-        },
-        {
-          "id": "a.5.2",
-          "name": "there's_a",
-          "arguments": [
-            {
-              "id": "a.5.2.0",
-              "arg": "dead_rabbit",
               "type": "new_state",
               "variable": false
             }
@@ -619,7 +593,7 @@
       "id": "r8container",
       "name": "mate_foxes_2",
       "conditionIndex": 2,
-      "addIndex": 6,
+      "addIndex": 12,
       "predicateSet": [
         {
           "id": "c.8.0",
@@ -711,7 +685,7 @@
       "id": "r9container",
       "name": "mate_foxes_3",
       "conditionIndex": 2,
-      "addIndex": 6,
+      "addIndex": 12,
       "predicateSet": [
         {
           "id": "c.9.0",
@@ -828,32 +802,6 @@
       ]
     },
     {
-      "id": "i3",
-      "name": "birth_of",
-      "arguments": [
-        {
-          "id": "i3.0",
-          "arg": "baby_fox",
-          "type": "babies",
-          "variable": false,
-          "value": "baby_fox"
-        }
-      ]
-    },
-    {
-      "id": "i4",
-      "name": "birth_of",
-      "arguments": [
-        {
-          "id": "i4.0",
-          "arg": "baby_fox",
-          "type": "babies",
-          "variable": false,
-          "value": "baby_fox"
-        }
-      ]
-    },
-    {
       "id": "i7",
       "name": "birth_of",
       "arguments": [
@@ -865,9 +813,35 @@
           "value": "baby_rabbit"
         }
       ]
+    },
+    {
+      "id": "i8",
+      "name": "birth_of",
+      "arguments": [
+        {
+          "id": "i8.0",
+          "arg": "baby_fox",
+          "type": "babies",
+          "variable": false,
+          "value": "baby_fox"
+        }
+      ]
+    },
+    {
+      "id": "i9",
+      "name": "birth_of",
+      "arguments": [
+        {
+          "id": "i9.0",
+          "arg": "baby_fox",
+          "type": "babies",
+          "variable": false,
+          "value": "baby_fox"
+        }
+      ]
     }
   ],
   4,
   9,
-  8
+  11
 ]
