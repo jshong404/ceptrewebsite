@@ -13,3 +13,10 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+/* Search bar */
+
+$(document).ready(function() {
+  $('#tipue_search_input').tipuesearch();
+});
