@@ -578,7 +578,7 @@ function updateAllSetSelectors() {
         setSelector.options.length = 0;
         var index = 0;
         for (var element of finalSets) {
-            if(set == 'setSelector' && element.id == 'numbers')
+            if(set == 'setSelector' && element.id == 'natural_numbers')
                 continue;
             var option = document.createElement('option');
             option.value = index++;
@@ -637,8 +637,8 @@ function updateArgumentSelector(argument, rulePredicate, ruleSets) {
     //determine if the predicate is a condition or a filter
     if ((rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) || rulePredicate.id.charAt(0) == 'f')
         argSet.add('new variable');
-    if (!isNumPred(rulePredicate.name) && argument.type=='numbers') {
-        if (!(rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) && rulePredicate.id.charAt(0) != 'f' && rulePredicate.id.charAt(0) != 'i')
+    if (argument.type=='natural_numbers') {
+        if (!isNumPred(rulePredicate.name) && !(rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) && rulePredicate.id.charAt(0) != 'f' && rulePredicate.id.charAt(0) != 'i')
             argSet.add('new expression');
         argSet.add('new number')
         argSet.add(argument.arg)

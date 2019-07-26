@@ -16,27 +16,27 @@ function getOperation(inputNN, operator, modifier) {
 //creates the static number predicates
 function createNumbers() {
     //Add numbers to set selectors
-    finalSets.add({ id: 'numbers', elements: new Set() });
+    finalSets.add({ id: 'natural_numbers', elements: new Set() });
     updateAllSetSelectors();
 
-    var argument1 = { id: 'lt0', value: 'numbers' };
-    var argument2 = { id: 'lt1', value: 'numbers' };
+    var argument1 = { id: 'lt0', value: 'natural_numbers' };
+    var argument2 = { id: 'lt1', value: 'natural_numbers' };
     fixedPredicates.add({ id: 'lt', name: LT, argumentIndex: 0, arguments: new Set([argument1, argument2]) })
 
-    argument1 = { id: 'gt0', value: 'numbers' };
-    argument2 = { id: 'gt1', value: 'numbers' };
+    argument1 = { id: 'gt0', value: 'natural_numbers' };
+    argument2 = { id: 'gt1', value: 'natural_numbers' };
     fixedPredicates.add({ id: 'gt', name: GT, argumentIndex: 0, arguments: new Set([argument1, argument2]) })
 
-    argument1 = { id: 'lte0', value: 'numbers' };
-    argument2 = { id: 'lte1', value: 'numbers' };
+    argument1 = { id: 'lte0', value: 'natural_numbers' };
+    argument2 = { id: 'lte1', value: 'natural_numbers' };
     fixedPredicates.add({ id: 'lte', name: LTE, argumentIndex: 0, arguments: new Set([argument1, argument2]) })
 
-    argument1 = { id: 'gte0', value: 'numbers' };
-    argument2 = { id: 'gte1', value: 'numbers' };
+    argument1 = { id: 'gte0', value: 'natural_numbers' };
+    argument2 = { id: 'gte1', value: 'natural_numbers' };
     fixedPredicates.add({ id: 'gte', name: GTE, argumentIndex: 0, arguments: new Set([argument1, argument2]) })
 
-    argument1 = { id: 'eq0', value: 'numbers' };
-    argument2 = { id: 'eq1', value: 'numbers' };
+    argument1 = { id: 'eq0', value: 'natural_numbers' };
+    argument2 = { id: 'eq1', value: 'natural_numbers' };
     fixedPredicates.add({ id: 'eq', name: EQ, argumentIndex: 0, arguments: new Set([argument1, argument2]) })
 
     updateAllPredicateSelectors();
