@@ -6,10 +6,17 @@
   <title>
     Video - Ceptre Editor
   </title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/logooooooo2.png">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="tipuesearch/tipuesearch_content.js"></script>
+  <link rel="stylesheet" href="tipuesearch/tipuesearch.css">
+  <script src="tipuesearch/tipuesearch_set.js"></script>
+  <script src="tipuesearch/tipuesearch.min.js"></script>
+
 
   <link rel="stylesheet" href="video.css">
 
@@ -30,6 +37,23 @@
     <a href="microceptre/index.html">Ceptre Editor</a>
     <a href="tutorial.html"> Tutorials</a>
   </div>
+
+
+  <div>
+    <form>
+      <div class="tipue_search_group">
+        <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters"
+          required><button type="submit" class="tipue_search_button">
+          <div class="tipue_search_icon">&#128270;</div>
+        </button>
+      </div>
+    </form>
+    <div id="tipue_search_content"></div>
+  </div>
+
+
+
+  
 
 
 </head>
