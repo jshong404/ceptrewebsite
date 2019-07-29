@@ -1,0 +1,1065 @@
+﻿[
+  [
+    {
+      "id": "natural_numbers",
+      "elements": []
+    },
+    {
+      "id": "applicant",
+      "elements": [
+        "sofia",
+        "marcus"
+      ]
+    }
+  ],
+  [
+    {
+      "id": "p0",
+      "name": "voted",
+      "argumentIndex": 2,
+      "arguments": [
+        {
+          "id": "p0.0",
+          "value": "applicant"
+        },
+        {
+          "id": "p0.1",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "voters",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p1.0",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "candidate",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p2.0",
+          "value": "applicant"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "winner",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p3.0",
+          "value": "applicant"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "do-over",
+      "argumentIndex": 0,
+      "arguments": []
+    }
+  ],
+  [
+    {
+      "id": "p2",
+      "name": "candidate",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p2.0",
+          "value": "applicant"
+        }
+      ]
+    },
+    {
+      "id": "p0",
+      "name": "voted",
+      "argumentIndex": 2,
+      "arguments": [
+        {
+          "id": "p0.0",
+          "value": "applicant"
+        },
+        {
+          "id": "p0.1",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "voters",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p1.0",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "winner",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p3.0",
+          "value": "applicant"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "do-over",
+      "argumentIndex": 0,
+      "arguments": []
+    }
+  ],
+  [
+    {
+      "index": 2,
+      "id": "r2container",
+      "name": "make_speech",
+      "conditionIndex": 7,
+      "addIndex": 14,
+      "predicateSet": [
+        {
+          "id": "c.2.0",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.2.0.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.2.1",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "c.2.1.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.2.2",
+          "name": "greater_than_equal",
+          "arguments": [
+            {
+              "id": "c.2.2.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.2.1",
+              "arg": "12",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.2.3",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.2.3.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.3.1",
+              "arg": "90",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.2.4",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.2.4.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            },
+            {
+              "id": "c.2.4.1",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.2.2",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "a.2.2.0",
+              "arg": "X-12",
+              "type": "natural_numbers",
+              "variable": "expr"
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.2.5",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.2.5.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.5.1",
+              "arg": "90",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.2.6",
+          "name": "greater_than_equal",
+          "arguments": [
+            {
+              "id": "c.2.6.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.6.1",
+              "arg": "0",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.2.4",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "a.2.4.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            },
+            {
+              "id": "a.2.4.1",
+              "arg": "V+12",
+              "type": "natural_numbers",
+              "variable": "expr"
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "X",
+            "A",
+            "V"
+          ]
+        },
+        {
+          "id": "applicant",
+          "elements": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "r3container",
+      "name": "charity",
+      "conditionIndex": 7,
+      "addIndex": 12,
+      "predicateSet": [
+        {
+          "id": "c.3.0",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.3.0.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.3.1",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "c.3.1.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.3.2",
+          "name": "greater_than_equal",
+          "arguments": [
+            {
+              "id": "c.3.2.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.3.2.1",
+              "arg": "20",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.3.3",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.3.3.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.3.3.1",
+              "arg": "90",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.3.4",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.3.4.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            },
+            {
+              "id": "c.3.4.1",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.3.5",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.3.5.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.3.5.1",
+              "arg": "90",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.3.6",
+          "name": "greater_than_equal",
+          "arguments": [
+            {
+              "id": "c.3.6.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.3.6.1",
+              "arg": "0",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.3.0",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "a.3.0.0",
+              "arg": "X-20",
+              "type": "natural_numbers",
+              "variable": "expr"
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.3.2",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "a.3.2.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            },
+            {
+              "id": "a.3.2.1",
+              "arg": "V+20",
+              "type": "natural_numbers",
+              "variable": "expr"
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "X",
+            "V"
+          ]
+        },
+        {
+          "id": "applicant",
+          "elements": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "r7container",
+      "name": "sofia_wins",
+      "conditionIndex": 11,
+      "addIndex": 6,
+      "predicateSet": [
+        {
+          "id": "c.7.4",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.7.4.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.7.4.1",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.7.5",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.7.5.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.7.5.1",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.7.6",
+          "name": "greater_than",
+          "arguments": [
+            {
+              "id": "c.7.6.0",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.7.6.1",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.7.0",
+          "name": "winner",
+          "arguments": [
+            {
+              "id": "a.7.0.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.7.7",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "c.7.7.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.7.8",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.7.8.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.7.8.1",
+              "arg": "10",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.7.9",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.7.9.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.7.10",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.7.10.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "S",
+            "M",
+            "V"
+          ]
+        },
+        {
+          "id": "applicant",
+          "elements": [
+            "C",
+            "Cb"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": "r8container",
+      "name": "marcus_wins",
+      "conditionIndex": 7,
+      "addIndex": 6,
+      "predicateSet": [
+        {
+          "id": "c.8.0",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.8.0.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.8.0.1",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.1",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.8.1.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.8.1.1",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.2",
+          "name": "greater_than",
+          "arguments": [
+            {
+              "id": "c.8.2.0",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.8.2.1",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.3",
+          "name": "voters",
+          "arguments": [
+            {
+              "id": "c.8.3.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.4",
+          "name": "less_than",
+          "arguments": [
+            {
+              "id": "c.8.4.0",
+              "arg": "V",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.8.4.1",
+              "arg": "10",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.5",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.8.5.0",
+              "arg": "C",
+              "type": "applicant",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "a.8.0",
+          "name": "winner",
+          "arguments": [
+            {
+              "id": "a.8.0.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.8.6",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.8.6.0",
+              "arg": "Cb",
+              "type": "applicant",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "M",
+            "S",
+            "V"
+          ]
+        },
+        {
+          "id": "applicant",
+          "elements": [
+            "C",
+            "Cb"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "id": "r10container",
+      "name": "tie",
+      "conditionIndex": 9,
+      "addIndex": 3,
+      "predicateSet": [
+        {
+          "id": "c.10.0",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.10.0.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.10.1",
+          "name": "candidate",
+          "arguments": [
+            {
+              "id": "c.10.1.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.10.2",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.10.2.0",
+              "arg": "sofia",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.10.2.1",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.3",
+          "name": "voted",
+          "arguments": [
+            {
+              "id": "c.10.3.0",
+              "arg": "marcus",
+              "type": "applicant",
+              "variable": false
+            },
+            {
+              "id": "c.10.3.1",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.4",
+          "name": "equal",
+          "arguments": [
+            {
+              "id": "c.10.4.0",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.10.4.1",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.10.0",
+          "name": "do-over",
+          "arguments": [],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.5",
+          "name": "greater_than",
+          "arguments": [
+            {
+              "id": "c.10.5.0",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.10.5.1",
+              "arg": "0",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.6",
+          "name": "greater_than",
+          "arguments": [
+            {
+              "id": "c.10.6.0",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.10.6.1",
+              "arg": "0",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.7",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.10.7.0",
+              "arg": "S",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.10.7.1",
+              "arg": "10",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.10.8",
+          "name": "less_than_equal",
+          "arguments": [
+            {
+              "id": "c.10.8.0",
+              "arg": "M",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.10.8.1",
+              "arg": "10",
+              "type": "natural_numbers",
+              "variable": false
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "S",
+            "M"
+          ]
+        },
+        {
+          "id": "applicant",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "i0",
+      "name": "candidate",
+      "argumentIndex": 0,
+      "arguments": [
+        {
+          "id": "i0.0",
+          "arg": "sofia",
+          "type": "applicant",
+          "variable": false,
+          "value": "sofia"
+        }
+      ]
+    },
+    {
+      "id": "i1",
+      "name": "candidate",
+      "arguments": [
+        {
+          "id": "i1.0",
+          "arg": "marcus",
+          "type": "applicant",
+          "variable": false,
+          "value": "marcus"
+        }
+      ]
+    },
+    {
+      "id": "i5",
+      "name": "voted",
+      "argumentIndex": 0,
+      "arguments": [
+        {
+          "id": "i5.0",
+          "arg": "sofia",
+          "type": "applicant",
+          "variable": false,
+          "value": "sofia"
+        },
+        {
+          "id": "i5.1",
+          "arg": "0",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "id": "i6",
+      "name": "voted",
+      "arguments": [
+        {
+          "id": "i6.0",
+          "arg": "marcus",
+          "type": "applicant",
+          "variable": false,
+          "value": "marcus"
+        },
+        {
+          "id": "i6.1",
+          "arg": "0",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "id": "i7",
+      "name": "voters",
+      "arguments": [
+        {
+          "id": "i7.0",
+          "arg": "90",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "90"
+        }
+      ]
+    }
+  ],
+  5,
+  10,
+  8
+]
