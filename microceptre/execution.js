@@ -211,6 +211,7 @@ function lockTransition(transition, currentState) {
             let result = evaluateNumberPred(currentCondition.name, argArray[0].arg, argArray[1].arg)
             if(result)
                 lockTransition(transition, currentState)   
+            else return;
         }
     }
 }

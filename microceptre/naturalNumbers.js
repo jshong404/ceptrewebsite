@@ -45,11 +45,11 @@ function createNumbers() {
 //evaluates the fixed number predicates
 function evaluateNumberPred(predicateName, arg1, arg2) {
     switch (predicateName){
-        case LT: return arg1 < arg2;
-        case GT: return arg1 > arg2;
-        case LTE: return arg1 <= arg2;
-        case GTE: return arg1 >= arg2;
-        case EQ: return arg1 == arg2;
+        case LT: return parseInt(arg1) < parseInt(arg2);
+        case GT: return parseInt(arg1) > parseInt(arg2);
+        case LTE: return parseInt(arg1) <= parseInt(arg2);
+        case GTE: return parseInt(arg1) >= parseInt(arg2);
+        case EQ: return parseInt(arg1) == parseInt(arg2);
     }
     return 'drnosaysno';
 }
