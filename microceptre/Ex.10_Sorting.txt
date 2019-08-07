@@ -1,0 +1,401 @@
+﻿[
+  [
+    {
+      "id": "natural_numbers",
+      "elements": []
+    }
+  ],
+  [
+    {
+      "id": "p0",
+      "name": "numbers",
+      "argumentIndex": 2,
+      "arguments": [
+        {
+          "id": "p0.0",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p0.1",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "number",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p1.0",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "no.",
+      "argumentIndex": 4,
+      "arguments": [
+        {
+          "id": "p3.0",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.1",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.2",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.3",
+          "value": "natural_numbers"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "p0",
+      "name": "numbers",
+      "argumentIndex": 2,
+      "arguments": [
+        {
+          "id": "p0.0",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p0.1",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "number",
+      "argumentIndex": 1,
+      "arguments": [
+        {
+          "id": "p1.0",
+          "value": "natural_numbers"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "no.",
+      "argumentIndex": 4,
+      "arguments": [
+        {
+          "id": "p3.0",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.1",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.2",
+          "value": "natural_numbers"
+        },
+        {
+          "id": "p3.3",
+          "value": "natural_numbers"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "index": 2,
+      "id": "r2container",
+      "name": "lower",
+      "conditionIndex": 2,
+      "addIndex": 4,
+      "predicateSet": [
+        {
+          "id": "c.2.0",
+          "name": "numbers",
+          "arguments": [
+            {
+              "id": "c.2.0.0",
+              "arg": "Y",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.0.1",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.2.1",
+          "name": "less_than",
+          "arguments": [
+            {
+              "id": "c.2.1.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.2.1.1",
+              "arg": "Y",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.2.0",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "a.2.0.0",
+              "arg": "X",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.2.2",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "a.2.2.0",
+              "arg": "Y",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "Y",
+            "X"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "r6container",
+      "name": "less_than",
+      "conditionIndex": 7,
+      "addIndex": 2,
+      "predicateSet": [
+        {
+          "id": "c.6.0",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "c.6.0.0",
+              "arg": "A",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.6.1",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "c.6.1.0",
+              "arg": "B",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.6.2",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "c.6.2.0",
+              "arg": "C",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.6.3",
+          "name": "number",
+          "arguments": [
+            {
+              "id": "c.6.3.0",
+              "arg": "D",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": true
+        },
+        {
+          "id": "c.6.4",
+          "name": "less_than",
+          "arguments": [
+            {
+              "id": "c.6.4.0",
+              "arg": "A",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.6.4.1",
+              "arg": "B",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.6.5",
+          "name": "less_than",
+          "arguments": [
+            {
+              "id": "c.6.5.0",
+              "arg": "B",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.6.5.1",
+              "arg": "C",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "c.6.6",
+          "name": "less_than",
+          "arguments": [
+            {
+              "id": "c.6.6.0",
+              "arg": "C",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "c.6.6.1",
+              "arg": "D",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        },
+        {
+          "id": "a.6.0",
+          "name": "no.",
+          "arguments": [
+            {
+              "id": "a.6.0.0",
+              "arg": "A",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "a.6.0.1",
+              "arg": "B",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "a.6.0.2",
+              "arg": "C",
+              "type": "natural_numbers",
+              "variable": true
+            },
+            {
+              "id": "a.6.0.3",
+              "arg": "D",
+              "type": "natural_numbers",
+              "variable": true
+            }
+          ],
+          "removeFlag": false
+        }
+      ],
+      "sets": [
+        {
+          "id": "natural_numbers",
+          "elements": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "i3",
+      "name": "numbers",
+      "argumentIndex": 0,
+      "arguments": [
+        {
+          "id": "i3.0",
+          "arg": "453",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "453"
+        },
+        {
+          "id": "i3.1",
+          "arg": "156",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "156"
+        }
+      ]
+    },
+    {
+      "id": "i4",
+      "name": "numbers",
+      "argumentIndex": 0,
+      "arguments": [
+        {
+          "id": "i4.0",
+          "arg": "84",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "84"
+        },
+        {
+          "id": "i4.1",
+          "arg": "35",
+          "type": "natural_numbers",
+          "variable": false,
+          "value": "35"
+        }
+      ]
+    }
+  ],
+  4,
+  6,
+  5
+]
