@@ -123,7 +123,7 @@ function getTransitions(currentState) {
             for (let arg of pred.arguments) {
                 dupPred.arguments.push({ arg: arg.arg, type: arg.type, variable: arg.variable });
                 if (!getTransitionArg(arg.arg, transition.arguments))
-                    transition.arguments.push({ id: arg.arg, arg: arg.arg, type: arg.type, fixed: !arg.variable });
+                    transition.arguments.push({ id: arg.arg, arg: arg.arg, type: arg.type, fixed: !arg.variable});
             }
             transition.remainingConditions.push(dupPred);
         }
@@ -211,7 +211,6 @@ function lockTransition(transition, currentState) {
             let result = evaluateNumberPred(currentCondition.name, argArray[0].arg, argArray[1].arg)
             if(result)
                 lockTransition(transition, currentState)   
-            else return;
         }
     }
 }

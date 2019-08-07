@@ -359,57 +359,41 @@ function createButtonsOnInitialize() {
 
     let selectEditor = document.createElement('div');
     selectEditor.setAttribute('class', 'toggle2');
-    selectEditor.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, selectExamples, true, false, false, false) };
+    selectEditor.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, true, false, false) };
     selectEditor.innerText = 'Editor';
     document.getElementById('editor_container').insertBefore(selectEditor, editor);
 
     let selectInitialState = document.createElement('div');
     selectInitialState.setAttribute('class', 'toggle1');
-    selectInitialState.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, selectExamples, false, true, false, false) }; 
+    selectInitialState.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, false, true, false) };
     selectInitialState.innerText = 'Initial State';
     document.getElementById('editor_container').insertBefore(selectInitialState, editor);
 
     let selectExecution = document.createElement('div');
     selectExecution.setAttribute('class', 'toggle1');
-    selectExecution.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, selectExamples, false, false, true, false) };
+    selectExecution.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, false, false, true) };
     selectExecution.innerText = 'Execution';
     document.getElementById('editor_container').insertBefore(selectExecution, editor);
 
-    let selectExamples = document.createElement('div');
-    selectExamples.setAttribute('class', 'toggle1');
-    selectExamples.onclick = function () { toggleTabs(selectEditor, selectInitialState, selectExecution, selectExamples, false, false, false, true) };
-    selectExamples.innerText = 'Examples';
-    document.getElementById('editor_container').insertBefore(selectExamples, editor);
-
-    toggleTabs(selectEditor, selectInitialState, selectExecution, selectExamples, true, false, false)
+    toggleTabs(selectEditor, selectInitialState, selectExecution, true, false, false)
 }
 
-function toggleTabs(editorButton, stateButton, executionButton, examplesButton, setEditor, setState, setExecution, setExamples) {
+function toggleTabs(editorButton, stateButton, executionButton, setEditor, setState, setExecution) {
     document.getElementById('editor').hidden = !setEditor;
     document.getElementById('initial').hidden = !setState;
     document.getElementById('execute').hidden = !setExecution;
-    document.getElementById('example').hidden= !setExamples;
     if (setEditor) {
         editorButton.setAttribute('class', 'toggle2');
         stateButton.setAttribute('class', 'toggle1');
         executionButton.setAttribute('class', 'toggle1');
-        examplesButton.setAttribute('class', 'toggle1');
-    } else if (setState){
+    } else if (setState) {
         editorButton.setAttribute('class', 'toggle1');
         stateButton.setAttribute('class', 'toggle2');
         executionButton.setAttribute('class', 'toggle1');
-        examplesButton.setAttribute('class', 'toggle1');
-    } else if (setExecution){
+    } else if (setExecution) {
         editorButton.setAttribute('class', 'toggle1');
         stateButton.setAttribute('class', 'toggle1');
         executionButton.setAttribute('class', 'toggle2');
-        examplesButton.setAttribute('class', 'toggle1');
-    } else if (setExamples) {
-        editorButton.setAttribute('class', 'toggle1');
-        stateButton.setAttribute('class', 'toggle1');
-        executionButton.setAttribute('class', 'toggle1');
-        examplesButton.setAttribute('class', 'toggle2');
-
     }
 }
 
@@ -637,8 +621,8 @@ function updateArgumentSelector(argument, rulePredicate, ruleSets) {
     //determine if the predicate is a condition or a filter
     if ((rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) || rulePredicate.id.charAt(0) == 'f')
         argSet.add('new variable');
-    if (argument.type=='natural_numbers') {
-        if (!isNumPred(rulePredicate.name) && !(rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) && rulePredicate.id.charAt(0) != 'f' && rulePredicate.id.charAt(0) != 'i')
+    if (!isNumPred(rulePredicate.name) && argument.type=='natural_numbers') {
+        if (!(rulePredicate.id.charAt(0) == 'c' && !isNumPred(rulePredicate.name)) && rulePredicate.id.charAt(0) != 'f' && rulePredicate.id.charAt(0) != 'i')
             argSet.add('new expression');
         argSet.add('new number')
         argSet.add(argument.arg)
